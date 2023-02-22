@@ -9,7 +9,22 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+                    MainRecipeView()
+                        .tabItem {
+                            Label("레시피", systemImage: "list.dash")
+                        }
+            
+                    MyFridgeView()
+                        .tabItem {
+                            Label("내 냉장고", systemImage: "list.dash")
+                        }
+            
+                    MyPageView()
+                        .tabItem {
+                            Label("마이 페이지", systemImage: "square.and.pencil")
+                        }
+                }
     }
 }
 

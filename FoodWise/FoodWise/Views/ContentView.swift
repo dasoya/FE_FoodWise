@@ -6,16 +6,35 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 struct ContentView: View {
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        return Group {
+          NavigationView {
+            switch authViewModel.state {
+            case .signedIn:
+                
+                MainView()
+
+            case .signedOut:
+                LoginView()
+                
+//                .navigationTitle(
+//                  NSLocalizedString(
+//                    "Sign-in with Google",
+//                    comment: "Sign-in navigation title"
+//                  ))
+            }
+          }
+          #if os(iOS)
+          .navigationViewStyle(StackNavigationViewStyle())
+          #endif
         }
-        .padding()
+       
     }
 }
 

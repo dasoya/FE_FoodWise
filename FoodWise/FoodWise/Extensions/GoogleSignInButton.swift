@@ -6,15 +6,13 @@
 //
 
 import SwiftUI
+import GoogleSignInSwift
+import GoogleSignIn
 
-struct GoogleSignInButton: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct GoogleSignInButton_Previews: PreviewProvider {
-    static var previews: some View {
-        GoogleSignInButton()
-    }
-}
+//extension SignInButtonColor{
+//    
+//    var foregroundColor: Color{
+//        return Color(.blue)
+//    }
+//    
+//}

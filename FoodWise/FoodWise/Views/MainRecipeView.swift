@@ -5,4 +5,14 @@
 //  Created by dasoya on 19.02.23.
 //
 
-import Foundation
+import SwiftUI
+
+struct MainRecipeView : View {
+    
+    var body : some View {
+        
+        Text("메인 레시피 창")
+        
+        
+    }
+}

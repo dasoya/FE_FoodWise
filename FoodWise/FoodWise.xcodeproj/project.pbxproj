@@ -14,6 +14,16 @@
 		CD54B58E299F8E6500D932B0 /* FoodWiseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B58D299F8E6500D932B0 /* FoodWiseTests.swift */; };
 		CD54B598299F8E6500D932B0 /* FoodWiseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B597299F8E6500D932B0 /* FoodWiseUITests.swift */; };
 		CD54B59A299F8E6500D932B0 /* FoodWiseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B599299F8E6500D932B0 /* FoodWiseUITestsLaunchTests.swift */; };
+		CD54B5A8299F97E400D932B0 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = CD54B5A7299F97E400D932B0 /* GoogleSignIn */; };
+		CD54B5AA299F97E400D932B0 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD54B5A9299F97E400D932B0 /* GoogleSignInSwift */; };
+		CD54B5AC299F9A7300D932B0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5AB299F9A7300D932B0 /* LoginView.swift */; };
+		CD54B5AE299F9BFD00D932B0 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5AD299F9BFD00D932B0 /* AuthenticationViewModel.swift */; };
+		CD54B5B5299F9E0900D932B0 /* GoogleSignInAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5B4299F9E0900D932B0 /* GoogleSignInAuthenticator.swift */; };
+		CD54B5BA29A2592700D932B0 /* MainRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5B929A2592700D932B0 /* MainRecipeView.swift */; };
+		CD54B5BC29A25A5900D932B0 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BB29A25A5900D932B0 /* MyPageView.swift */; };
+		CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BD29A25CA500D932B0 /* MainView.swift */; };
+		CD54B5C029A25F1D00D932B0 /* MyFridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */; };
+		CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,15 @@
 		CD54B593299F8E6500D932B0 /* FoodWiseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodWiseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD54B597299F8E6500D932B0 /* FoodWiseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWiseUITests.swift; sourceTree = "<group>"; };
 		CD54B599299F8E6500D932B0 /* FoodWiseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWiseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CD54B5AB299F9A7300D932B0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CD54B5AD299F9BFD00D932B0 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		CD54B5B4299F9E0900D932B0 /* GoogleSignInAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAuthenticator.swift; sourceTree = "<group>"; };
+		CD54B5B629A2444A00D932B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD54B5B929A2592700D932B0 /* MainRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRecipeView.swift; sourceTree = "<group>"; };
+		CD54B5BB29A25A5900D932B0 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
+		CD54B5BD29A25CA500D932B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeView.swift; sourceTree = "<group>"; };
+		CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD54B5A8299F97E400D932B0 /* GoogleSignIn in Frameworks */,
+				CD54B5AA299F97E400D932B0 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +115,13 @@
 		CD54B57B299F8E6400D932B0 /* FoodWise */ = {
 			isa = PBXGroup;
 			children = (
+				CD54B5C129A2633400D932B0 /* Extensions */,
 				CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */,
-				CD54B57E299F8E6400D932B0 /* ContentView.swift */,
+				CD54B5B629A2444A00D932B0 /* Info.plist */,
+				CD54B5B3299F9DF500D932B0 /* Services */,
+				CD54B5B1299F9C1900D932B0 /* Views */,
+				CD54B5B0299F9C0E00D932B0 /* Models */,
+				CD54B5AF299F9C0200D932B0 /* ViewModels */,
 				CD54B580299F8E6500D932B0 /* Assets.xcassets */,
 				CD54B582299F8E6500D932B0 /* Preview Content */,
 			);
@@ -127,6 +153,50 @@
 			path = FoodWiseUITests;
 			sourceTree = "<group>";
 		};
+		CD54B5AF299F9C0200D932B0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CD54B5AD299F9BFD00D932B0 /* AuthenticationViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CD54B5B0299F9C0E00D932B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD54B5B1299F9C1900D932B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD54B57E299F8E6400D932B0 /* ContentView.swift */,
+				CD54B5AB299F9A7300D932B0 /* LoginView.swift */,
+				CD54B5BD29A25CA500D932B0 /* MainView.swift */,
+				CD54B5B929A2592700D932B0 /* MainRecipeView.swift */,
+				CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */,
+				CD54B5BB29A25A5900D932B0 /* MyPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD54B5B3299F9DF500D932B0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CD54B5B4299F9E0900D932B0 /* GoogleSignInAuthenticator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CD54B5C129A2633400D932B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +213,10 @@
 			dependencies = (
 			);
 			name = FoodWise;
+			packageProductDependencies = (
+				CD54B5A7299F97E400D932B0 /* GoogleSignIn */,
+				CD54B5A9299F97E400D932B0 /* GoogleSignInSwift */,
+			);
 			productName = FoodWise;
 			productReference = CD54B579299F8E6400D932B0 /* FoodWise.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +289,9 @@
 				Base,
 			);
 			mainGroup = CD54B570299F8E6400D932B0;
+			packageReferences = (
+				CD54B5A6299F97E400D932B0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = CD54B57A299F8E6400D932B0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +334,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD54B5BC29A25A5900D932B0 /* MyPageView.swift in Sources */,
+				CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */,
+				CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */,
+				CD54B5AE299F9BFD00D932B0 /* AuthenticationViewModel.swift in Sources */,
+				CD54B5C029A25F1D00D932B0 /* MyFridgeView.swift in Sources */,
+				CD54B5AC299F9A7300D932B0 /* LoginView.swift in Sources */,
 				CD54B57F299F8E6400D932B0 /* ContentView.swift in Sources */,
+				CD54B5BA29A2592700D932B0 /* MainRecipeView.swift in Sources */,
+				CD54B5B5299F9E0900D932B0 /* GoogleSignInAuthenticator.swift in Sources */,
 				CD54B57D299F8E6400D932B0 /* FoodWiseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +504,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FoodWise/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodWise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -447,6 +533,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"FoodWise/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FoodWise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -577,6 +664,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD54B5A6299F97E400D932B0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD54B5A7299F97E400D932B0 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD54B5A6299F97E400D932B0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		CD54B5A9299F97E400D932B0 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD54B5A6299F97E400D932B0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD54B571299F8E6400D932B0 /* Project object */;
 }
