@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD13D87729A63F4000F47795 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87629A63F4000F47795 /* Recipe.swift */; };
+		CD13D87929A6562600F47795 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87829A6562600F47795 /* NetworkManager.swift */; };
+		CD13D87B29AA569300F47795 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87A29AA569300F47795 /* extension.swift */; };
 		CD54B57D299F8E6400D932B0 /* FoodWiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */; };
 		CD54B57F299F8E6400D932B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B57E299F8E6400D932B0 /* ContentView.swift */; };
 		CD54B581299F8E6500D932B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD54B580299F8E6500D932B0 /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD13D87629A63F4000F47795 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		CD13D87829A6562600F47795 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CD13D87A29AA569300F47795 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		CD54B579299F8E6400D932B0 /* FoodWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWiseApp.swift; sourceTree = "<group>"; };
 		CD54B57E299F8E6400D932B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD13D87529A63F3300F47795 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD13D87629A63F4000F47795 /* Recipe.swift */,
+				CD13D87829A6562600F47795 /* NetworkManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CD54B570299F8E6400D932B0 = {
 			isa = PBXGroup;
 			children = (
@@ -115,12 +130,12 @@
 		CD54B57B299F8E6400D932B0 /* FoodWise */ = {
 			isa = PBXGroup;
 			children = (
+				CD13D87529A63F3300F47795 /* Models */,
 				CD54B5C129A2633400D932B0 /* Extensions */,
 				CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */,
 				CD54B5B629A2444A00D932B0 /* Info.plist */,
 				CD54B5B3299F9DF500D932B0 /* Services */,
 				CD54B5B1299F9C1900D932B0 /* Views */,
-				CD54B5B0299F9C0E00D932B0 /* Models */,
 				CD54B5AF299F9C0200D932B0 /* ViewModels */,
 				CD54B580299F8E6500D932B0 /* Assets.xcassets */,
 				CD54B582299F8E6500D932B0 /* Preview Content */,
@@ -161,13 +176,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		CD54B5B0299F9C0E00D932B0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		CD54B5B1299F9C1900D932B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */,
+				CD13D87A29AA569300F47795 /* extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD13D87929A6562600F47795 /* NetworkManager.swift in Sources */,
 				CD54B5BC29A25A5900D932B0 /* MyPageView.swift in Sources */,
 				CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */,
 				CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */,
@@ -341,9 +351,11 @@
 				CD54B5C029A25F1D00D932B0 /* MyFridgeView.swift in Sources */,
 				CD54B5AC299F9A7300D932B0 /* LoginView.swift in Sources */,
 				CD54B57F299F8E6400D932B0 /* ContentView.swift in Sources */,
+				CD13D87B29AA569300F47795 /* extension.swift in Sources */,
 				CD54B5BA29A2592700D932B0 /* MainRecipeView.swift in Sources */,
 				CD54B5B5299F9E0900D932B0 /* GoogleSignInAuthenticator.swift in Sources */,
 				CD54B57D299F8E6400D932B0 /* FoodWiseApp.swift in Sources */,
+				CD13D87729A63F4000F47795 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
