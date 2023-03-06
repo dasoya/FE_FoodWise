@@ -13,15 +13,16 @@ struct MainRecipeView : View {
     
     var body : some View {
      
+        HotRecipeView()
         
-        
+        Text("위급한 식자재 이용 레시피")
 //        List(dataModel.recipes){
 //
 //        }
         
         //RecipeBox()
         
-        Text("main recipe 창")
+       
         
     }
 }

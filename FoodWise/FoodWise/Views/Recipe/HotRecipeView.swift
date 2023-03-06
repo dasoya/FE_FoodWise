@@ -17,18 +17,14 @@ struct HotRecipeView: View {
     var body: some View {
         
         NavigationView {
-                    // 2
-                    List {
+                    
+                List {
                         ImageSlider()
                             .frame(height: 300)
                             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                    } //: List
+                } //: List
                    
-                } //: Navigation Vie
-        
-       Image("sample")
-            .resizable()
-        
+                } 
         
     }
 }
@@ -42,37 +38,50 @@ struct ImageSlider: View {
         // 2
         TabView {
             ForEach(images, id: \.self) { item in
-                ZStack{
-                    Image(item)
-                        .resizable()
-                        .frame(height: 467)
-                        .scaledToFill()
-
-                    Blur(style: .light)
-                        .frame(height: 467)
-
-                    Rectangle()
-                        .fill(.white)
-                    Image(item)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-
-//                    Rectangle()
-//                        .fill(.white)
-                        .frame(height: 467)
-                        .mask(
-                            LinearGradient(gradient:
-                                            Gradient(stops:[
-                                                .init(color: Color.white, location: 0),
-                                                .init(color:Color.white, location: 0.3),
-                                                .init(color:Color.white.opacity(0), location: 1.0)]), startPoint: .top, endPoint: .bottom)
-                        )
-                }
+                getGradientImage(image: item)
             }
         }
+        .edgesIgnoringSafeArea(.all)
+        .frame(minWidth: 0, maxWidth: .infinity)
         .tabViewStyle(PageTabViewStyle())
+        
     }
 }
+
+
+
+    func getGradientImage(image : String) -> some View {
+        
+       return  ZStack{
+            
+            
+//                    Image(item)
+//                        .resizable()
+//                        .frame(height: 467)
+//                        .scaledToFill()
+//
+//                    Blur(style: .light)
+//                        .frame(height: 467)
+
+            Rectangle()
+                .fill(.white)
+            
+            
+            Image(image)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(height: 467)
+                .mask(
+                    LinearGradient(gradient:
+                                    Gradient(stops:[
+                                        .init(color: Color.white, location: 0),
+                                        .init(color:Color.white, location: 0.3),
+                                        .init(color:Color.white.opacity(0), location: 1.0)]), startPoint: .top, endPoint: .bottom)
+                )
+        }
+    }
+    
+
 
 struct HotRecipeView_Previews: PreviewProvider {
     static var previews: some View {
