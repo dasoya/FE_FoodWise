@@ -8,25 +8,36 @@
 import SwiftUI
 
 struct MainView: View {
-    var body: some View {
-        TabView {
-                    MainRecipeView()
-                        .tabItem {
-                            Label("레시피", systemImage: "list.dash")
-                        }
+        
+        
+        @State var selectedIndex: Int = 0
             
-                    MyFridgeView()
-                        .tabItem {
-                            Label("내 냉장고", systemImage: "list.dash")
-                        }
-            
-                    MyPageView()
-                        .tabItem {
-                            Label("마이 페이지", systemImage: "square.and.pencil")
-                        }
+            var body: some View {
+                CustomTabView(tabs: TabType.allCases.map({ $0.tabItem }), selectedIndex: $selectedIndex) { index in
+                    
+                    let type = TabType(rawValue: index) ?? .recipe
+                    getTabView(type: type)
                 }
-    }
+            }
+            
+            @ViewBuilder
+            func getTabView(type: TabType) -> some View {
+                switch type {
+                case .recipe:
+                    MainRecipeView()
+                case .myFridge:
+                    MyFridgeView()
+                case .Diary:
+                    MyFridgeView()
+                case .myPage:
+                    MyPageView()
+                }
+            }
+        
+        
 }
+
+
 
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {

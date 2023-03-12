@@ -32,6 +32,7 @@ struct RecipeDetailView: View {
                 
                 Spacer()
             }
+            
             ScrollView(showsIndicators: false){
                 VStack{
                     RecipeIngredientBox()
