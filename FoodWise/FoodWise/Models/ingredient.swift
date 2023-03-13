@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Ingredient{
+struct Ingredient {
     
     let id : String
     let name : String
@@ -17,7 +17,7 @@ struct Ingredient{
     
 }
 
-extension Ingredient: Decodable {
+extension Ingredient: Decodable, Hashable{
     
     enum CodingKeys: String, CodingKey{
         

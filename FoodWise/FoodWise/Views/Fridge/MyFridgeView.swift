@@ -6,31 +6,66 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct MyFridgeView: View {
     
-    var fridgeSectionImageDict = ["육류": "meat",
-                                  "해산물": "seafood","과일": "fruit","유제품": "dairy","채소": "vegetable","기타": "etc"]
-    
-    
-    var inventory = ["육류" : TestData.ingredients,"해산물": TestData.ingredients]
-  
+//    var fridgeSectionImageDict = ["육류": "meat",
+//                                  "해산물": "seafood","과일": "fruit","유제품": "dairy","채소": "vegetable","기타": "etc"]
+//
+//
+//    var inventory = ["육류" : TestData.ingredients,"해산물": TestData.ingredients]
+    let attributedText = Text("지난 달에 ") + Text("100g").foregroundColor(Color.primary).bold() + Text("의\n식재료를 낭비했어요")
+    @State var showModal = false
     
     var body: some View {
-        VStack{
+        VStack(alignment: .leading){
+            
+            ZStack() {
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Color.mygray)
+                .frame(width: 350, height: 87)
+
+                HStack{
+                    Image("leftover")
+                        .resizable()
+                        .frame(width: 40, height: 47)
+                        .padding(.leading,24)
+                    
+                    attributedText
+                            .padding(.leading,16)
+                            .font(.title3)
+                            .lineSpacing(5)
+                        
+                    Spacer()
+                }
+                
+            }
             
             Text("내 냉장고")
-                .font(.title)
+                .frame(height: 30)
+                
+            MyFridgeListView()
             
-//
-//            ForEach(inventory, id: .self){ item in
-//
-//
-//
-//            }
-//
+            Spacer()
+           
+            HStack{
+                Spacer()
+                
+                Button(action: { showModal = true } ){
+                    Circle()
+                        .frame(width: 56,height: 56)
+                        .foregroundColor(.red)
+                        .overlay(Image(systemName: "plus")
+                            .font(.system(size: 29, weight: .semibold))
+                            .foregroundColor(.black),alignment: .center)
+                }.sheet(isPresented: $showModal){
+                    
+                    
+                }
+            }
             
-        }
+        }.padding(20)
     }
 }
 

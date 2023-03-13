@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 extension Date {
     
@@ -40,4 +41,12 @@ extension UIImage {
 
         return newImage!
     }
+}
+
+extension Color{
+    
+    static let mygray : Color = Color(red: 0.91, green: 0.91, blue: 0.93)
+    
+    static let primary : Color = Color(red: 1, green: 0.42, blue: 0.24)
+    
 }

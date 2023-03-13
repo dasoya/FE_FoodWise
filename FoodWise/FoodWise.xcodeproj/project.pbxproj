@@ -36,6 +36,8 @@
 		CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */; };
 		CD58AFAD29AB9C9E008C4947 /* RecipeBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58AFAC29AB9C9E008C4947 /* RecipeBoxView.swift */; };
 		CD58AFAF29AB9CF0008C4947 /* HotRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */; };
+		CDDA8EE229BFCE6900663A3B /* MyFridgeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */; };
+		CDDA8EE429BFD86400663A3B /* addIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE329BFD86400663A3B /* addIngredientView.swift */; };
 		FD924DC1B0AF9E2B9C8BDB3D /* Pods_FoodWise_FoodWiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45ACE794628F0E3A2321119D /* Pods_FoodWise_FoodWiseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		CD58AFAC29AB9C9E008C4947 /* RecipeBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBoxView.swift; sourceTree = "<group>"; };
 		CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecipeView.swift; sourceTree = "<group>"; };
+		CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeListView.swift; sourceTree = "<group>"; };
+		CDDA8EE329BFD86400663A3B /* addIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addIngredientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */,
+				CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */,
+				CDDA8EE329BFD86400663A3B /* addIngredientView.swift */,
 			);
 			path = Fridge;
 			sourceTree = "<group>";
@@ -206,9 +212,9 @@
 		CD54B57B299F8E6400D932B0 /* FoodWise */ = {
 			isa = PBXGroup;
 			children = (
+				CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */,
 				CD13D87529A63F3300F47795 /* Models */,
 				CD54B5C129A2633400D932B0 /* Extensions */,
-				CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */,
 				CD54B5B629A2444A00D932B0 /* Info.plist */,
 				CD54B5B3299F9DF500D932B0 /* Services */,
 				CD54B5B1299F9C1900D932B0 /* Views */,
@@ -533,6 +539,7 @@
 				CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */,
 				CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */,
 				CD54B5AE299F9BFD00D932B0 /* AuthenticationViewModel.swift in Sources */,
+				CDDA8EE429BFD86400663A3B /* addIngredientView.swift in Sources */,
 				CD03908829B628BD000A7F95 /* RecipeIngredientBox.swift in Sources */,
 				CD54B5C029A25F1D00D932B0 /* MyFridgeView.swift in Sources */,
 				CD1F26BE29B67260007ABC0C /* CustomTabView.swift in Sources */,
@@ -541,6 +548,7 @@
 				CD03908A29B6291F000A7F95 /* RecipeHowBox.swift in Sources */,
 				CD03908629B616D6000A7F95 /* RecipeDetailView.swift in Sources */,
 				CD54B5AC299F9A7300D932B0 /* LoginView.swift in Sources */,
+				CDDA8EE229BFCE6900663A3B /* MyFridgeListView.swift in Sources */,
 				CD54B57F299F8E6400D932B0 /* ContentView.swift in Sources */,
 				CD13D87B29AA569300F47795 /* extension.swift in Sources */,
 				CD54B5BA29A2592700D932B0 /* MainRecipeView.swift in Sources */,
