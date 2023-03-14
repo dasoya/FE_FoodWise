@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct addIngredientView: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+       Text("식재료 등록")
+        
+        
     }
 }
 
