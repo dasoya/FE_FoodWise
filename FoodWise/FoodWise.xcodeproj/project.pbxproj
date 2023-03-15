@@ -38,6 +38,7 @@
 		CD58AFAF29AB9CF0008C4947 /* HotRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */; };
 		CDDA8EE229BFCE6900663A3B /* MyFridgeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */; };
 		CDDA8EE429BFD86400663A3B /* addIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE329BFD86400663A3B /* addIngredientView.swift */; };
+		CDDA8EE629C1C9F600663A3B /* SelectExpDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE529C1C9F600663A3B /* SelectExpDateView.swift */; };
 		FD924DC1B0AF9E2B9C8BDB3D /* Pods_FoodWise_FoodWiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45ACE794628F0E3A2321119D /* Pods_FoodWise_FoodWiseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecipeView.swift; sourceTree = "<group>"; };
 		CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeListView.swift; sourceTree = "<group>"; };
 		CDDA8EE329BFD86400663A3B /* addIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addIngredientView.swift; sourceTree = "<group>"; };
+		CDDA8EE529C1C9F600663A3B /* SelectExpDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectExpDateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */,
 				CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */,
 				CDDA8EE329BFD86400663A3B /* addIngredientView.swift */,
+				CDDA8EE529C1C9F600663A3B /* SelectExpDateView.swift */,
 			);
 			path = Fridge;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				CD54B5C029A25F1D00D932B0 /* MyFridgeView.swift in Sources */,
 				CD1F26BE29B67260007ABC0C /* CustomTabView.swift in Sources */,
 				CD58AFAF29AB9CF0008C4947 /* HotRecipeView.swift in Sources */,
+				CDDA8EE629C1C9F600663A3B /* SelectExpDateView.swift in Sources */,
 				CD03908E29B6652B000A7F95 /* ingredient.swift in Sources */,
 				CD03908A29B6291F000A7F95 /* RecipeHowBox.swift in Sources */,
 				CD03908629B616D6000A7F95 /* RecipeDetailView.swift in Sources */,

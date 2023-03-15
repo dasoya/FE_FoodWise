@@ -59,25 +59,32 @@ struct TabBottomView: View {
     @Binding var selectedIndex: Int
     
     var body: some View {
-        HStack {
-            Spacer()
+        
+        VStack{
             
-            ForEach(tabbarItems.indices) { index in
-                let item = tabbarItems[index]
-                Button {
-                    self.selectedIndex = index
-                } label: {
-                    let isSelected = selectedIndex == index
-                    TabItemView(data: item, isSelected: isSelected)
-                      
-                }
+            Divider()
+            
+            HStack {
+                
                 Spacer()
+                
+                
+                ForEach(tabbarItems.indices) { index in
+                    let item = tabbarItems[index]
+                    Button {
+                        self.selectedIndex = index
+                    } label: {
+                        let isSelected = selectedIndex == index
+                        TabItemView(data: item, isSelected: isSelected)
+                        
+                    }
+                    Spacer()
+                }
             }
-        }
-        .frame(height: height)
-     //   .background(Color.white)
-       // .shadow(radius: 5, x: 0, y: 4)
-    }
+            .frame(height: height)
+            //   .background(Color.white)
+            // .shadow(radius: 5, x: 0, y: 4)
+        }}
 }
 
 

@@ -59,9 +59,10 @@ struct MyFridgeView: View {
                         .overlay(Image(systemName: "plus")
                             .font(.system(size: 29, weight: .semibold))
                             .foregroundColor(.black),alignment: .center)
+                        .padding(.bottom,25)
                 }.sheet(isPresented: $showModal){
                     
-                    
+                    addIngredientView()
                 }
             }
             

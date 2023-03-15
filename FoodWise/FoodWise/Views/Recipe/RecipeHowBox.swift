@@ -53,7 +53,10 @@ struct RecipeHowBox: View {
             }//: DISCLOSURE
         label: {
             HStack{
-                Image(systemName: "info.circle")
+                Image("recipe_how")
+                    .resizable()
+                    .frame(width:32,height:26)
+                
                 Text("요리 방법")
                     .fontWeight(.bold)
             }

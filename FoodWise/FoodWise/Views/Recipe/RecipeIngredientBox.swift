@@ -48,7 +48,10 @@ struct RecipeIngredientBox: View {
         //: DISCLOSURE
         label: {
             HStack{
-                Image(systemName: "info.circle")
+                Image("recipe_ingredient")
+                    .resizable()
+                    .frame(width:32,height:21)
+                
                 Text("레시피 재료")
                     .fontWeight(.bold)
             }
