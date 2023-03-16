@@ -64,7 +64,7 @@ struct RecipeBox : View {
                             .lineSpacing(12)
                             .padding(.horizontal, 4)
                             .padding(.vertical, 2)
-                            .background(Color(red: 1, green: 0.42, blue: 0.24))
+                            .background(Color.myprimary)
                             .cornerRadius(2)
                     }
                     

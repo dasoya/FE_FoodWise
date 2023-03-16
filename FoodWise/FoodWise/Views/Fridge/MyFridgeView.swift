@@ -15,7 +15,7 @@ struct MyFridgeView: View {
 //
 //
 //    var inventory = ["육류" : TestData.ingredients,"해산물": TestData.ingredients]
-    let attributedText = Text("지난 달에 ") + Text("100g").foregroundColor(Color.primary).bold() + Text("의\n식재료를 낭비했어요")
+    let attributedText = Text("지난 달에 ") + Text("100g").foregroundColor(Color.myprimary).bold() + Text("의\n식재료를 낭비했어요")
     @State var showModal = false
     
     var body: some View {
@@ -55,7 +55,7 @@ struct MyFridgeView: View {
                 Button(action: { showModal = true } ){
                     Circle()
                         .frame(width: 56,height: 56)
-                        .foregroundColor(.red)
+                        .foregroundColor(.myprimary)
                         .overlay(Image(systemName: "plus")
                             .font(.system(size: 29, weight: .semibold))
                             .foregroundColor(.black),alignment: .center)
@@ -71,7 +71,6 @@ struct MyFridgeView: View {
 }
 
 struct MyFridgeView_Previews: PreviewProvider {
-    
     
     static var previews: some View {
         MyFridgeView()

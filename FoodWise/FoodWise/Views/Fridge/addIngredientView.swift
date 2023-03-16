@@ -13,16 +13,22 @@ struct addIngredientView: View {
     @State var expiredDate : Date = Date()
     @State var amount : String = "0"
     
+    @State private var searchText = ""
+    
     var body: some View {
         
         VStack{
             
             Text("식재료 등록")
             
-            
             ///재료 검색
+            SearchBar(text: $searchText)
             
-            
+            if(!searchText.isEmpty ){
+                ForEach(TestData.ingredients.filter({ searchText.isEmpty ? false : $0.name.contains(searchText) })) { item in
+                    Text(item.name)
+                }
+            }
             
             ///용량
             RoundedRectangle(cornerRadius: 8)
@@ -80,6 +86,7 @@ struct addIngredientView: View {
 }
 
 struct addIngredientView_Previews: PreviewProvider {
+    
     static var previews: some View {
         addIngredientView()
     }
