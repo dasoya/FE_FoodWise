@@ -13,9 +13,15 @@ struct MyFridgeView: View {
     let attributedText = Text("지난 달에 ") + Text("100g").foregroundColor(Color.myprimary).bold() + Text("의\n식재료를 낭비했어요")
     @State var showModal = false
     
+    var fridgeSectionImageDict = ["육류": "meat",
+                                  "해산물": "seafood","과일": "fruit","유제품": "dairy","채소": "vegetable","기타": "etc"]
+    
+    
+    var inventory = ["육류" : TestData.ingredients,"해산물": TestData.ingredients]
+    
     var body: some View {
         VStack(alignment: .leading){
-            
+           
             ZStack() {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color.mygray)
@@ -34,15 +40,16 @@ struct MyFridgeView: View {
                         
                     Spacer()
                 }
-                
             }
             
             Text("내 냉장고")
                 .frame(height: 30)
             
+       
+            
             ZStack(alignment: .bottom){
                 ScrollView{
-                    MyFridgeListView()
+                   MyFridgeListView()
                 }
                 
                 Spacer()

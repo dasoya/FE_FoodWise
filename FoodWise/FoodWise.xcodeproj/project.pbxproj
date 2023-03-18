@@ -38,6 +38,7 @@
 		CDDA8EE229BFCE6900663A3B /* MyFridgeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */; };
 		CDDA8EE429BFD86400663A3B /* addIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE329BFD86400663A3B /* addIngredientView.swift */; };
 		CDDA8EE829C3C08700663A3B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE729C3C08700663A3B /* SearchBar.swift */; };
+		CDDA8EEA29C5F5A800663A3B /* IngredientListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE929C5F5A800663A3B /* IngredientListRow.swift */; };
 		FD924DC1B0AF9E2B9C8BDB3D /* Pods_FoodWise_FoodWiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45ACE794628F0E3A2321119D /* Pods_FoodWise_FoodWiseUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeListView.swift; sourceTree = "<group>"; };
 		CDDA8EE329BFD86400663A3B /* addIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addIngredientView.swift; sourceTree = "<group>"; };
 		CDDA8EE729C3C08700663A3B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CDDA8EE929C5F5A800663A3B /* IngredientListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			children = (
 				CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */,
 				CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */,
+				CDDA8EE929C5F5A800663A3B /* IngredientListRow.swift */,
 				CDDA8EE329BFD86400663A3B /* addIngredientView.swift */,
 			);
 			path = Fridge;
@@ -534,6 +537,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDA8EEA29C5F5A800663A3B /* IngredientListRow.swift in Sources */,
 				CD13D87929A6562600F47795 /* NetworkManager.swift in Sources */,
 				CD54B5BC29A25A5900D932B0 /* MyPageView.swift in Sources */,
 				CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */,
