@@ -14,21 +14,41 @@ struct addIngredientView: View {
     @State var amount : String = "0"
     
     @State private var searchText = ""
+    @State private var isSearchEdting = false
+    @Binding var showModal : Bool
     
     var body: some View {
         
         VStack{
             
             Text("식재료 등록")
+                .padding(.bottom,24)
             
             ///재료 검색
-            SearchBar(text: $searchText)
+            SearchBar(text: $searchText,isEditing: $isSearchEdting)
             
-            if(!searchText.isEmpty ){
-                ForEach(TestData.ingredients.filter({ searchText.isEmpty ? false : $0.name.contains(searchText) })) { item in
-                    Text(item.name)
+            
+            if(!searchText.isEmpty && isSearchEdting ){
+                ScrollView(.horizontal){
+                    HStack{
+                        ForEach(TestData.ingredients.filter({ searchText.isEmpty ? false : $0.name.contains(searchText) })) { item in
+                            
+                            Button{
+                               
+                                isSearchEdting = false
+                                searchText = item.name
+                                
+                            }label: {
+                                Text(item.name).grayBtnBoxTextStyle()
+                                
+                            }
+                        }
+                    }
                 }
+                .frame(width: 320)
+                .padding()
             }
+                    
             
             ///용량
             RoundedRectangle(cornerRadius: 8)
@@ -77,6 +97,34 @@ struct addIngredientView: View {
                     }
                 })
             
+            ///등록 버튼
+            HStack{
+                Button{showModal = false} label: {
+                    Text("취소")
+                        .foregroundColor(.black)
+                        .frame(width: 128,height: 49)
+                        .background(Color.mygray4)
+                        .cornerRadius(10)
+                     
+                }
+                
+                Spacer()
+                
+                Button{showModal = false} label: {
+                    Text("등록")
+                        .foregroundColor(.black)
+                        .frame(width: 128,height: 49)
+                        .background(Color.myprimary)
+                        .cornerRadius(10)
+                     
+                }
+                
+                
+            }.frame(width: 262, height: 49)
+                .padding(.top,24)
+            
+            
+            
           
     }
             
@@ -88,6 +136,6 @@ struct addIngredientView: View {
 struct addIngredientView_Previews: PreviewProvider {
     
     static var previews: some View {
-        addIngredientView()
+        addIngredientView(showModal: .constant(true))
     }
 }

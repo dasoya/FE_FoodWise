@@ -33,7 +33,6 @@
 		CD54B5BC29A25A5900D932B0 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BB29A25A5900D932B0 /* MyPageView.swift */; };
 		CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BD29A25CA500D932B0 /* MainView.swift */; };
 		CD54B5C029A25F1D00D932B0 /* MyFridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */; };
-		CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */; };
 		CD58AFAD29AB9C9E008C4947 /* RecipeBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58AFAC29AB9C9E008C4947 /* RecipeBoxView.swift */; };
 		CD58AFAF29AB9CF0008C4947 /* HotRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */; };
 		CDDA8EE229BFCE6900663A3B /* MyFridgeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */; };
@@ -95,7 +94,6 @@
 		CD54B5BB29A25A5900D932B0 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		CD54B5BD29A25CA500D932B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeView.swift; sourceTree = "<group>"; };
-		CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
 		CD58AFAC29AB9C9E008C4947 /* RecipeBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBoxView.swift; sourceTree = "<group>"; };
 		CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecipeView.swift; sourceTree = "<group>"; };
 		CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeListView.swift; sourceTree = "<group>"; };
@@ -286,7 +284,6 @@
 		CD54B5C129A2633400D932B0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */,
 				CD13D87A29AA569300F47795 /* extension.swift */,
 			);
 			path = Extensions;
@@ -540,7 +537,6 @@
 				CD13D87929A6562600F47795 /* NetworkManager.swift in Sources */,
 				CD54B5BC29A25A5900D932B0 /* MyPageView.swift in Sources */,
 				CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */,
-				CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */,
 				CD54B5AE299F9BFD00D932B0 /* AuthenticationViewModel.swift in Sources */,
 				CDDA8EE429BFD86400663A3B /* addIngredientView.swift in Sources */,
 				CD03908829B628BD000A7F95 /* RecipeIngredientBox.swift in Sources */,

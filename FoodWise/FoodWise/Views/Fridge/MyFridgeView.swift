@@ -9,12 +9,7 @@ import SwiftUI
 import UIKit
 
 struct MyFridgeView: View {
-    
-//    var fridgeSectionImageDict = ["육류": "meat",
-//                                  "해산물": "seafood","과일": "fruit","유제품": "dairy","채소": "vegetable","기타": "etc"]
-//
-//
-//    var inventory = ["육류" : TestData.ingredients,"해산물": TestData.ingredients]
+   
     let attributedText = Text("지난 달에 ") + Text("100g").foregroundColor(Color.myprimary).bold() + Text("의\n식재료를 낭비했어요")
     @State var showModal = false
     
@@ -44,25 +39,30 @@ struct MyFridgeView: View {
             
             Text("내 냉장고")
                 .frame(height: 30)
-                
-            MyFridgeListView()
             
-            Spacer()
-           
-            HStack{
+            ZStack(alignment: .bottom){
+                ScrollView{
+                    MyFridgeListView()
+                }
+                
                 Spacer()
                 
-                Button(action: { showModal = true } ){
-                    Circle()
-                        .frame(width: 56,height: 56)
-                        .foregroundColor(.myprimary)
-                        .overlay(Image(systemName: "plus")
-                            .font(.system(size: 29, weight: .semibold))
-                            .foregroundColor(.black),alignment: .center)
-                        .padding(.bottom,25)
-                }.sheet(isPresented: $showModal){
+                HStack{
+                    Spacer()
                     
-                    addIngredientView()
+                    Button(action: { showModal = true } ){
+                        Circle()
+                            .frame(width: 56,height: 56)
+                            .foregroundColor(.myprimary)
+                            .overlay(Image(systemName: "plus")
+                                .font(.system(size: 29, weight: .semibold))
+                                .foregroundColor(.black),alignment: .center)
+                            .padding(.bottom,25)
+                    }.sheet(isPresented: $showModal){
+                        
+                        addIngredientView(showModal: $showModal)
+                            .presentationDetents([.fraction(0.5), .large])
+                    }
                 }
             }
             

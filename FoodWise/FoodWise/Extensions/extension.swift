@@ -46,9 +46,36 @@ extension UIImage {
 extension Color{
     
     static let mygray : Color = Color(red: 0.91, green: 0.91, blue: 0.93)
+    static let mygray4 : Color = Color(red: 0.56, green: 0.56, blue: 0.63)
+    static let mygray5 : Color = Color(red: 0.38, green: 0.38, blue: 0.45)
     static let myprimary : Color = Color(red: 1, green: 0.42, blue: 0.24)
     
     
 }
 
+extension Text{
+    
+    
+    func grayBoxTextStyle() -> some View {
+        self.font(.caption)
+            .foregroundColor(Color.white)
+            .lineSpacing(12)
+            .padding(.horizontal, 4)
+            .padding(.vertical, 2)
+            .background(Color.mygray5)
+            .cornerRadius(2)
+    }
+    
+    func grayBtnBoxTextStyle() -> some View {
+        self.font(.system(size: 20))
+            .foregroundColor(Color.white)
+            .lineSpacing(12)
+            .padding(.horizontal, 4)
+            .padding(.vertical, 2)
+            .background(Color.mygray5)
+            .cornerRadius(2)
+    }
+    
+        
+}
 

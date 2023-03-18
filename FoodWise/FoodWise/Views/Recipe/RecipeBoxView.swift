@@ -69,14 +69,7 @@ struct RecipeBox : View {
                     }
                     
                     if let ingredient = recipe.ingredient {
-                        Text(ingredient)
-                            .font(.caption)
-                            .foregroundColor(Color.white)
-                            .lineSpacing(12)
-                            .padding(.horizontal, 4)
-                            .padding(.vertical, 2)
-                            .background(Color(red: 0.38, green: 0.38, blue: 0.45))
-                            .cornerRadius(2)
+                        Text(ingredient).grayBoxTextStyle()
                     }
                 }
                 
