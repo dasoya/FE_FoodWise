@@ -19,7 +19,7 @@ struct SearchBar: View {
                 .padding(7)
                 .padding(.horizontal, 25)
                 .frame(width: 262, height: 49)
-                .background(Color.mygray)
+                .background(Color.mygray2)
                 .cornerRadius(8)
                 .overlay(
                     HStack {

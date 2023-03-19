@@ -28,7 +28,7 @@ struct MainView: View {
                 case .myFridge:
                     MyFridgeView()
                 case .Diary:
-                    MyFridgeView()
+                    DiaryView()
                 case .myPage:
                     MyPageView()
                 }

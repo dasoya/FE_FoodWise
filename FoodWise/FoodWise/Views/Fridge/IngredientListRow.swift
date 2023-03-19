@@ -53,7 +53,7 @@ struct IngredientListRow: View {
 
         }
         .frame(width: 350, height: 49)
-            .background(Color.mygray)
+            .background(Color.mygray2)
             .cornerRadius(6)
                     
     }

@@ -52,7 +52,7 @@ struct addIngredientView: View {
             
             ///용량
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color.mygray)
+                .fill(Color.mygray2)
                 .frame(width: 262, height: 49)
                 .overlay(content: {
                     
@@ -82,7 +82,7 @@ struct addIngredientView: View {
             
             ///소비 기한
             RoundedRectangle(cornerRadius: 8)
-                .fill(Color.mygray)
+                .fill(Color.mygray2)
                 .frame(width: 262, height: 49)
                 .overlay(content: {
                     HStack{

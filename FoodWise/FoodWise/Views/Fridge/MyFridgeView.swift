@@ -24,7 +24,7 @@ struct MyFridgeView: View {
            
             ZStack() {
                 RoundedRectangle(cornerRadius: 8)
-                    .fill(Color.mygray)
+                    .fill(Color.mygray2)
                 .frame(width: 350, height: 87)
 
                 HStack{
