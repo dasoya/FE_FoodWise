@@ -12,17 +12,29 @@ struct MainRecipeView : View {
     @StateObject private var dataModel = RecipesDataModel()
     
     var body : some View {
-     
-        VStack{
+    
+        return VStack(alignment: .leading){
             
             HotRecipeView()
             
-            //Text("위급한 식자재 이용 레시피")
-            
-            //        List(dataModel.recipes){
-            //
-            //        }
-            
+            HStack{
+                Image("recipe_hot")
+                Text("위급한 식자재 이용 레시피")
+                    .font(.custom("GmarketSansBold", size: 20))
+                    
+            }
+            HStack{
+                
+                ForEach(dataModel.expRecipes ) { recipe in
+                    NavigationLink(destination: RecipeDetailView(recipe: recipe)){
+                        RecipeBox(recipe: recipe)
+                    }
+                   
+                }
+            }
+            .onAppear{
+                dataModel.fetch()
+            }
             //RecipeBox()
             
             
@@ -30,3 +42,10 @@ struct MainRecipeView : View {
     }
 }
 
+
+//struct MainRecipeView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        RecipeBox(recipe: TestData.Recipes[0])
+////        .previewLayout(.sizeThatFits)
+//    }
+//}

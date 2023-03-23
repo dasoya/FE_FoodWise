@@ -10,7 +10,7 @@ import SwiftUI
 struct IngredientListRow: View {
     
     
-    var item  = Ingredient(id: "0", name:"Pork",amount: 800, expiredDate: Date())
+    var item  = TestData.ingredient
     
     var dateFormat =  DateFormatter()
    

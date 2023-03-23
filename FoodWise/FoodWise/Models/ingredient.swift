@@ -9,7 +9,7 @@ import Foundation
 
 struct Ingredient : Identifiable {
     
-    let id : String
+    let id : Int
     let name : String
     var amount : Int?
     var expiredDate: Date?

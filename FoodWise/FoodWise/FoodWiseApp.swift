@@ -38,10 +38,20 @@ struct FoodWiseApp: App {
 }
 
 struct TestData {
-    static var recipe = Recipe(id:"none",name:"투움바 파스타", imageURL: URL(fileURLWithPath: "none"),likeCnt: 32, ingredient: "면", expiredDate: Date())
     
-    static var ingredient = Ingredient(id: "a", name:"Pork",amount: 800, expiredDate: Date())
+    static var recipe = Recipe(id: 0,name:"투움바 파스타", imageURL: URL(fileURLWithPath: "none"),likeCnt: 32, ingredient: "면", expiredDate: 2)
+    
+    static var ingredient = Ingredient(id:  1, name:"Pork",amount: 800, expiredDate: Date())
     static var ingredients : [Ingredient] =  [TestData.ingredient,
-                                              Ingredient(id: "b", name:"Pie",amount: 800, expiredDate: Date()),
-                                              Ingredient(id: "c", name:"Pizza",amount: 800, expiredDate: Date())]
+                                              Ingredient(id: 2, name:"Pie",amount: 800, expiredDate: Date()),
+                                              Ingredient(id: 3, name:"Pizza",amount: 800, expiredDate: Date())]
+    
+//    static var Recipes : [Recipe] = {
+//        let url = Bundle.main.url(forResource: "/app/recipe/recommend", withExtension: "json")
+//        let data = try! Data(contentsOf: url)
+//        let wrapper = try! JSONDecoder().decode(Wrapper<Recipe>.self, from: data)
+//       
+//        return wrapper.items
+//    }()
+    
 }

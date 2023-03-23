@@ -9,12 +9,20 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     
+    @StateObject private var dataModel : RecipeDataModel
+
+    
     @State private var isIngredientExpanded = false
     @State private var isHowExpanded = false
     
     let nutrients: [String] = ["Energy", "Sugar", "Fat", "Protein", "Vitamins", "Minerals"]
         
     @State private var scrollViewContentSize: CGSize = .zero
+    
+    init(recipe: Recipe){
+        let dataModel = RecipeDataModel(recipe: recipe)
+        _dataModel = StateObject(wrappedValue: dataModel)
+    }
 
     var body: some View {
     
@@ -69,6 +77,6 @@ struct TransparentGroupBox: GroupBoxStyle {
 
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetailView()
+        RecipeDetailView(recipe: TestData.recipe)
     }
 }

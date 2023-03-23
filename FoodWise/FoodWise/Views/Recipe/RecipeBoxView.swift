@@ -42,6 +42,7 @@ struct RecipeBox : View {
                         Text("\(cnt)")
                             .font(.caption)
                             .lineSpacing(12)
+                            .foregroundColor(.black)
                 
                             
                     }
@@ -57,13 +58,14 @@ struct RecipeBox : View {
             Group{
                 HStack(alignment: .top, spacing: 4) {
                     if let date = recipe.expiredDate{
-                        let leftDay = Date().leftDay(from: date)
-                        Text("D-\(leftDay)")
+                       // let leftDay = Date().leftDay(from: date)
+                        Text("D-\(date)")
                             .font(.caption)
                             .foregroundColor(Color.white)
                             .lineSpacing(12)
                             .padding(.horizontal, 4)
                             .padding(.vertical, 2)
+                            .fixedSize(horizontal: false, vertical: true)
                             .background(Color.myprimary)
                             .cornerRadius(2)
                     }
@@ -76,6 +78,7 @@ struct RecipeBox : View {
                 Text(recipe.name)
                     .fontWeight(.medium)
                     .font(.callout)
+                    .foregroundColor(.black)
                     .lineSpacing(16)
                     .padding(.bottom,10)
                     .padding(.top,-2)
@@ -108,8 +111,7 @@ struct RecipeView_Previews: PreviewProvider {
         HStack{
             RecipeBox(recipe: TestData.recipe)
                 .previewLayout(.sizeThatFits)
-            RecipeBox(recipe: TestData.recipe)
-                .previewLayout(.sizeThatFits)
+          
         }
     }
 }

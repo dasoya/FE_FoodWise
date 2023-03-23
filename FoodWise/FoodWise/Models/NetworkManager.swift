@@ -13,6 +13,7 @@ struct Wrapper<T:Decodable> : Decodable{
 }
 
 
+
 struct Resource<T> {
     let url: URL
     // Other properties and methods
@@ -28,18 +29,8 @@ protocol APIResource {
 
 extension APIResource {
     var url: URL {
-        var components = URLComponents(string: "https://api.stackexchange.com/2.2")!
+        var components = URLComponents(string: "http://34.64.139.210")!
         components.path = methodPath
-        components.queryItems = [
-        URLQueryItem(name: "site", value: "stackoverflow"),
-        URLQueryItem(name: "order", value: "desc"),
-        URLQueryItem(name: "sort", value: "votes"),
-        URLQueryItem(name: "tagged", value: "swiftui"),
-        URLQueryItem(name: "pagesize", value: "10")
-        ]
-        if let filter = filter {
-            components.queryItems?.append(URLQueryItem(name: "filter", value: filter))
-        }
         return components.url!
     }
 }
@@ -47,19 +38,18 @@ extension APIResource {
 struct RecipesResource: APIResource {
     
     typealias ModelType = Recipe
-    var id: Int?
+    var id : Int?
     
     var methodPath: String{
         guard let id = id else {
-            return "/recipes"
+            return "/recipe/recommend"
             
         }
-        return "/recipes/\(id)"
+        
+        return "/recipe/\(id)"
     }
     
-    var filter: String?{
-        id != nil ? "!9_bDDx" : nil
-    }
+    var filter: String?
 }
 
 protocol NetworkRequest: AnyObject {
@@ -75,7 +65,10 @@ extension NetworkRequest {
                 DispatchQueue.main.async { completion(nil) }
                 return
             }
+            // Use the Resource struct to parse data
+        
             DispatchQueue.main.async { completion(value) }
+               
         }
         task.resume()
     }
@@ -84,26 +77,29 @@ extension NetworkRequest {
 
 
 class APIRequest<Resource: APIResource>{
-    
+
     let resource: Resource
-    
+
     init(resource: Resource){
         self.resource = resource
     }
-    
+
 }
 
 extension APIRequest: NetworkRequest {
-    
-    func decode(_ data: Data) -> [Resource.ModelType]? {
+
+    func decode(_ data: Data) -> RecommendRecipe? {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        let wrapper = try? decoder.decode(Wrapper<Resource.ModelType>.self, from: data)
-        return wrapper?.items
+        let MainRecipes = try? decoder.decode(RecommendRecipe.self, from: data)
         
+        //print(MainRecipes!)
+        
+        return MainRecipes
+
     }
-    
-    func execute(withCompletion completion: @escaping ([Resource.ModelType]?) -> Void){
+
+    func execute(withCompletion completion: @escaping (RecommendRecipe?) -> Void){
         load(resource.url, withCompletion: completion)
     }
 }
