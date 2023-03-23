@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct RecipeDetailView: View {
     
@@ -33,9 +34,8 @@ struct RecipeDetailView: View {
                 .ignoresSafeArea()
             
             HStack{
-                Text("된장 크림 파스타")
-                    .font(.title)
-                    .bold()
+                Text("된장 크림 파스타!")
+                    .title1()
                     .padding(.leading,20)
                 
                 Spacer()
@@ -76,7 +76,12 @@ struct TransparentGroupBox: GroupBoxStyle {
 }
 
 struct RecipeDetailView_Previews: PreviewProvider {
+    
+   
+    
     static var previews: some View {
-        RecipeDetailView(recipe: TestData.recipe)
+       
+      
+        return RecipeDetailView(recipe: TestData.recipe)
     }
 }

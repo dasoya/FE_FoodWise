@@ -4,10 +4,10 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string></string>
-		<string>GmarketSansMedium.otf</string>
-		<string>GmarketSansBold.otf</string>
-		<string>GmarketSansLight.otf</string>
+		<string>Pretendard/Pretendard-Regular.ttf</string>
+		<string>GmarketSansTTF/GmarketSansTTFMedium.ttf</string>
+		<string>GmarketSansTTF/GmarketSansTTFBold.ttf</string>
+		<string>GmarketSansTTF/GmarketSansTTFLight.ttf</string>
 	</array>
 	<key>GIDClientID</key>
 	<string>554323776297-g9tflklfd6hudsuo1mg0guall73rtbh4.apps.googleusercontent.com</string>

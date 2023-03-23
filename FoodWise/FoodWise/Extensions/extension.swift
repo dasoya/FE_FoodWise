@@ -76,6 +76,59 @@ extension Text{
             .cornerRadius(2)
     }
     
+    func title1() -> some View {
+        self.font(.custom("GmarketSansTTFBold", size: 28))
+            
+    }
+    
+    func title2() -> some View {
+        self.font(.custom("GmarketSansTTFBold", size: 20))
+            
+    }
+    
+    func title3() -> some View {
+        self.font(.custom("GmarketSansTTFBold", size: 18))
+            
+    }
+    
+ 
+    func subTitle1() -> some View {
+        self.font(.custom("GmarketSansTTFMedium", size: 18))
+            
+    }
+    
+    
+    func subTitle2() -> some View {
+        self.font(.custom("Pretendard-Medium", size: 18))
+            
+    }
+    
+    func subTitle3() -> some View {
+        self.font(.custom("Pretendard-Medium", size: 16))
+            
+    }
+    
+    func body1() -> some View {
+        self.font(.custom("Pretendard-Regular", size: 16))
+            
+    }
+    
+    func body2() -> some View {
+        self.font(.custom("Pretendard-Regular", size: 14))
+            
+    }
+    
+    func tag1() -> some View {
+        self.font(.custom("Pretendard-Regular", size: 12))
+            
+    }
+    
+    func tag2() -> some View {
+        self.font(.custom("Pretendard-SemiBold", size: 12))
+            
+    }
+    
         
 }
+
 

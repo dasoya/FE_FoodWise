@@ -12,7 +12,16 @@ struct MainRecipeView : View {
     @StateObject private var dataModel = RecipesDataModel()
     
     var body : some View {
-    
+        
+        UIFont.familyNames.sorted().forEach { familyName in
+            print("*** \(familyName) ***")
+            UIFont.fontNames(forFamilyName: familyName).forEach { fontName in
+                print("\(fontName)")
+            }
+            print("---------------------")
+        }
+        
+        
         return VStack(alignment: .leading){
             
             HotRecipeView()
@@ -20,7 +29,7 @@ struct MainRecipeView : View {
             HStack{
                 Image("recipe_hot")
                 Text("위급한 식자재 이용 레시피")
-                    .font(.custom("GmarketSansBold", size: 20))
+                    .font(.custom("GmarketSansTTFBold", size: 20))
                     
             }
             HStack{
