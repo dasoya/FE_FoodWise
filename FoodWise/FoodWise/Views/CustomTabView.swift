@@ -47,7 +47,7 @@ struct CustomTabView<Content: View>: View {
                 Spacer()
                 TabBottomView(tabbarItems: tabs, selectedIndex: $selectedIndex)
             }
-            .padding(.bottom, 8)
+           
         }
     }
 }
@@ -80,11 +80,12 @@ struct TabBottomView: View {
                     }
                     Spacer()
                 }
-            }
-            .frame(height: height)
-            //   .background(Color.white)
-            // .shadow(radius: 5, x: 0, y: 4)
-        }}
+            }.frame(height: height)
+           
+           
+        } .background(Color.mygray1)
+        
+    }
 }
 
 

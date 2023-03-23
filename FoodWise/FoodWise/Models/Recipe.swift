@@ -60,7 +60,7 @@ class RecipesDataModel : ObservableObject {
     @Published private(set) var isLoading = false
     
     private var request : APIRequest<RecipesResource>?
-    
+   
     func fetchRecipes(){
         
         guard !isLoading else { return }
@@ -85,6 +85,7 @@ class RecipesDataModel : ObservableObject {
             self?.expRecipes = recipes?.body.expRecipe ?? []
             self?.ivtRecipes = recipes?.body.ivtRecipe ?? []
             self?.isLoading = false
+        
         }
         
     }

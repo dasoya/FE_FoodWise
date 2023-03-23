@@ -40,7 +40,7 @@ struct RecipeBox : View {
                 
                     if let cnt = recipe.likeCnt{
                         Text("\(cnt)")
-                            .font(.custom("Pretendard-Regular", size: 12))
+                            .tag1()
                             .font(.caption)
                             .lineSpacing(12)
                             .foregroundColor(.black)
@@ -61,8 +61,7 @@ struct RecipeBox : View {
                     if let date = recipe.expiredDate{
                        // let leftDay = Date().leftDay(from: date)
                         Text("D-\(date)")
-                            .font(.custom("Pretendard-Regular", size: 12))
-                            .font(.caption)
+                            .tag1()
                             .foregroundColor(Color.white)
                             .lineSpacing(12)
                             .padding(.horizontal, 4)
@@ -78,8 +77,7 @@ struct RecipeBox : View {
                 }
                 
                 Text(recipe.name)
-                    .fontWeight(.medium)
-                    .font(.custom("Pretendard-Regular", size: 16))
+                    .subTitle3()
                     .foregroundColor(.black)
                     .lineSpacing(16)
                     .padding(.bottom,10)
@@ -91,8 +89,9 @@ struct RecipeBox : View {
                 
             
         }
-            .background(Color(red: 0.96, green: 0.96, blue: 0.98))
-            .cornerRadius(4)
+        .background(Color.mygray1)
+        .cornerRadius(4)
+        .shadow(color: .mygray2, radius: 2)
     }
     
     
