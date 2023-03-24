@@ -20,12 +20,11 @@ struct HotRecipeView: View {
             
                List {
                     ImageSlider()
-                        .frame(height: 300)
+                        .frame(height: 467)
                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
-                .toolbar(.hidden, for: .navigationBar)
                 .edgesIgnoringSafeArea(.all)
         }
       
@@ -39,24 +38,45 @@ struct ImageSlider: View {
     // 1
     private let images = ["sample", "sample1", "sample"]
     
+    init() {
+         UIScrollView.appearance().bounces = false
+      }
+    
     var body: some View {
         // 2
-        ScrollView {
+        
+        ScrollView(showsIndicators: false) {
             TabView {
                 ForEach(images, id: \.self) { item in
-                    getGradientImage(image: item)
-                        .ignoresSafeArea()
+                    ZStack(alignment: .bottomLeading){
+                        getGradientImage(image: item)
+                            .ignoresSafeArea()
+                        
+                        VStack(alignment: .leading){
+                            Text("지금 HOT한 레시피")
+                                .subTitle1()
+                                .padding(.bottom,1)
+                            
+                            Text("된장 크림 파스타")
+                                .title1()
+                        }
+                        .padding(.leading,20)
+                        .padding(.bottom,50)
+                        
+                    }
                 } .ignoresSafeArea()
             }
             .frame(
                 width: UIScreen.main.bounds.width ,
-                height: UIScreen.main.bounds.height
+                height: 467
             )
-            .frame(minWidth: 0, maxWidth: .infinity)
             .tabViewStyle(PageTabViewStyle())
             .onAppear {
                 setupAppearance()
-            }}
+            }
+            
+        }
+       
         
     }
     
@@ -88,8 +108,7 @@ struct ImageSlider: View {
             Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(maxHeight: .infinity)//467
-
+                .frame(width: UIScreen.main.bounds.width,height: 467)//467
                 .mask(
                     LinearGradient(gradient:
                                     Gradient(stops:[
@@ -97,7 +116,7 @@ struct ImageSlider: View {
                                         .init(color:Color.white, location: 0.3),
                                         .init(color:Color.white.opacity(0), location: 1.0)]), startPoint: .top, endPoint: .bottom)
                 )
-        }.edgesIgnoringSafeArea(.top)
+        }
     }
     
 
