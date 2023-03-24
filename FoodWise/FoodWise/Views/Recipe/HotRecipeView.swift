@@ -12,21 +12,24 @@ import UIKit
 
 struct HotRecipeView: View {
     
-  
-    
     var slideshow = ImageSlideshow()
     
     var body: some View {
         
         NavigationView {
-                    
-                List {
-                        ImageSlider()
-                            .frame(height: 300)
-                            //  .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-                } //: List
-                   
-                } 
+            
+               List {
+                    ImageSlider()
+                        .frame(height: 300)
+                        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+                        .listRowSeparator(.hidden)
+                }
+                .listStyle(.plain)
+                .toolbar(.hidden, for: .navigationBar)
+                .edgesIgnoringSafeArea(.all)
+        }
+      
+        
         
     }
 }
@@ -38,16 +41,29 @@ struct ImageSlider: View {
     
     var body: some View {
         // 2
-        TabView {
-            ForEach(images, id: \.self) { item in
-                getGradientImage(image: item)
+        ScrollView {
+            TabView {
+                ForEach(images, id: \.self) { item in
+                    getGradientImage(image: item)
+                        .ignoresSafeArea()
+                } .ignoresSafeArea()
             }
-        }
-        .edgesIgnoringSafeArea(.all)
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .tabViewStyle(PageTabViewStyle())
+            .frame(
+                width: UIScreen.main.bounds.width ,
+                height: UIScreen.main.bounds.height
+            )
+            .frame(minWidth: 0, maxWidth: .infinity)
+            .tabViewStyle(PageTabViewStyle())
+            .onAppear {
+                setupAppearance()
+            }}
         
     }
+    
+    func setupAppearance() {
+       UIPageControl.appearance().currentPageIndicatorTintColor = .black
+       UIPageControl.appearance().pageIndicatorTintColor = UIColor.black.withAlphaComponent(0.2)
+     }
 }
 
 
@@ -72,7 +88,8 @@ struct ImageSlider: View {
             Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(height: 467)
+                .frame(maxHeight: .infinity)//467
+
                 .mask(
                     LinearGradient(gradient:
                                     Gradient(stops:[
@@ -80,7 +97,7 @@ struct ImageSlider: View {
                                         .init(color:Color.white, location: 0.3),
                                         .init(color:Color.white.opacity(0), location: 1.0)]), startPoint: .top, endPoint: .bottom)
                 )
-        }
+        }.edgesIgnoringSafeArea(.top)
     }
     
 

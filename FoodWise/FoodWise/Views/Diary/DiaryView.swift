@@ -11,6 +11,8 @@ struct DiaryView: View {
     var body: some View {
         WeeklyHeader()
             .padding(.top,38)
+        
+        
     }
 }
 

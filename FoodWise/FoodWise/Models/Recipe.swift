@@ -61,20 +61,20 @@ class RecipesDataModel : ObservableObject {
     
     private var request : APIRequest<RecipesResource>?
    
-    func fetchRecipes(){
-        
-        guard !isLoading else { return }
-        isLoading = true
-        let resource = RecipesResource()
-        let request = APIRequest(resource: resource)
-        self.request = request
-        request.execute{[weak self] recipes in
-//            self?.hotRecipes = recipes?.hotRecipe ?? []
-//            self?.expRecipes = recipes?.expRecipe ?? []
-//            self?.ivtRecipes = recipes?.ivtRecipe ?? []
-            self?.isLoading = false
-        }
-    }
+//    func fetchRecipes(){
+//
+//        guard !isLoading else { return }
+//        isLoading = true
+//        let resource = RecipesResource()
+//        let request = APIRequest(resource: resource)
+//        self.request = request
+//        request.execute{[weak self] recipes in
+////            self?.hotRecipes = recipes?.hotRecipe ?? []
+////            self?.expRecipes = recipes?.expRecipe ?? []
+////            self?.ivtRecipes = recipes?.ivtRecipe ?? []
+//            self?.isLoading = false
+//        }
+//    }
     
     func fetch(){
         guard !isLoading else { return }

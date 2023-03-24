@@ -23,10 +23,9 @@ struct MainRecipeView : View {
 //
         
         return VStack(alignment: .leading){
-            
-            HotRecipeView()
-            
             ScrollView(showsIndicators : false){
+            
+                HotRecipeView()
                 
                 HStack{
                     Image("recipe_hot")
@@ -38,10 +37,10 @@ struct MainRecipeView : View {
                     Spacer()
                 }
              
-                ScrollView(.horizontal, showsIndicators : true){
+                ScrollView(.horizontal, showsIndicators : false){
                     HStack{
                         
-                        ForEach(dataModel.expRecipes) { recipe in
+                        ForEach(dataModel.hotRecipes) { recipe in
                             NavigationLink(destination: RecipeDetailView(recipe: recipe)){
                                 RecipeBox(recipe: recipe)
                             }
@@ -49,7 +48,8 @@ struct MainRecipeView : View {
                         }
                     }
                 }.padding(.bottom,33)
-                .padding(.leading,-40)
+                //.padding(.leading,-40)
+                
                 
                 HStack{
                     Image("recipe_home")
@@ -74,7 +74,7 @@ struct MainRecipeView : View {
                 }.padding(.leading,-40)
                 
                 Spacer(minLength: 40)
-            }.padding(.leading,20)
+            }//.padding(.leading,20)
             
             
             
