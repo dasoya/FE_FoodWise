@@ -23,18 +23,20 @@ struct RecipeDetailView: View {
     init(recipe: Recipe){
         let dataModel = RecipeDataModel(recipe: recipe)
         _dataModel = StateObject(wrappedValue: dataModel)
+        
+        dataModel.fetchRecipe()
     }
 
     var body: some View {
     
         VStack() {
             
-            getGradientImage(image: "sample")
+            getGradientImage(image: dataModel.recipe.image ?? Image("sample"))
                 .frame(height: 358)
                 .ignoresSafeArea()
             
             HStack{
-                Text("된장 크림 파스타!")
+                Text(dataModel.recipe.name)
                     .title1()
                     .padding(.leading,20)
                 
@@ -43,8 +45,8 @@ struct RecipeDetailView: View {
             
             ScrollView(showsIndicators: false){
                 VStack{
-                    RecipeIngredientBox()
-                    RecipeHowBox()
+                    RecipeIngredientBox(ingredients: dataModel.recipe.ingredientList ?? TestData.ingredients)
+                    RecipeHowBox(recipeList: dataModel.recipe.recipeList ?? TestData.recipeList1)
                 
                 }.background(
                         GeometryReader { geo -> Color in

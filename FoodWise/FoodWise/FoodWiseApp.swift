@@ -39,8 +39,9 @@ struct FoodWiseApp: App {
 
 struct TestData {
     
-    static var recipe = Recipe(id: 0,name:"투움바 파스타", imageURL: URL(fileURLWithPath: "none"),likeCnt: 32, ingredient: "면", expiredDate: 2)
-    
+    static var recipe = Recipe(id: 0,name:"투움바 파스타", imageURL: URL(fileURLWithPath: "none"),likeCnt: 32, ingredientList: ingredients,recipeList: recipeList1, ingredient:"감자", expiredDate: 2)
+    static let hotrecipe = [recipe]
+    static let recipeList1 : [RecipeHow] = [RecipeHow(id: 1, content: "면을 삶아줍니다."), RecipeHow(id: 2, content: "22")]
     static var ingredient = Ingredient(id:  1, name:"Pork",amount: 800, expiredDate: Date())
     static var ingredients : [Ingredient] =  [TestData.ingredient,
                                               Ingredient(id: 2, name:"Pie",amount: 800, expiredDate: Date()),

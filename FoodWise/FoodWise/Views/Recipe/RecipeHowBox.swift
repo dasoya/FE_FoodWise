@@ -14,12 +14,22 @@ struct RecipeHowBox: View {
     
     let nutrients: [String] = ["Energy", "Sugar", "Fat", "Protein", "Vitamins", "Minerals"]
     
+    var recipeList : [RecipeHow]
+    
+    init(recipeList : [RecipeHow]){
+        self.recipeList = recipeList
+    }
+    
     var body: some View {
-        GroupBox(){
+        
+        
+        
+        return GroupBox(){
             DisclosureGroup(isExpanded: $isExpanded){
-                ForEach(0..<nutrients.count, id: \.self){ index in
+                
+                ForEach(recipeList){ item in
                     
-                    if(index != 0)
+                    if(item.id != 1)
                     { Divider()
                     }else{
                         Divider()
@@ -34,12 +44,12 @@ struct RecipeHowBox: View {
                         Circle()
                             .fill(Color(red: 0.78, green: 0.78, blue: 0.78))
                             .frame(width: 20,height:20)
-                            .overlay(Text("\(index+1)").font(.caption))
+                            .overlay(Text("\(item.id)").font(.caption))
                        
                            
                         
                         Group{
-                            Text(nutrients[index])
+                            Text(item.content)
                                 .padding(.vertical, 3)
                             
                         }//: GROUP
@@ -75,6 +85,6 @@ struct RecipeHowBox: View {
 
 struct RecipeHowBox_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeHowBox()
+        RecipeHowBox(recipeList: TestData.recipeList1)
     }
 }

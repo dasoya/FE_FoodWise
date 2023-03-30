@@ -13,24 +13,36 @@ struct RecipeIngredientBox: View {
     
     let nutrients: [String] = ["Energy", "Sugar", "Fat", "Protein", "Vitamins", "Minerals"]
     
+    var ingredients : [Ingredient]
+  
+    
+    init(ingredients: [Ingredient]){
+        
+        self.ingredients = ingredients
+        
+    }
+    
     var body: some View {
        GroupBox(){
             
             DisclosureGroup(isExpanded: $isExpanded){
                 
-                ForEach(0..<nutrients.count, id: \.self){ index in
+                ForEach(ingredients.indices){ index in
                     
                     if(index != 0)
-                    { Divider()
-                    }else{
+                    {
+                        Divider()
+                    } else{
+                        
                         Divider()
                             .padding(.vertical, 5)
                             .opacity(0)
+                            
                     }
                     
                     HStack{
                         Group{
-                            Text(nutrients[index])
+                            Text(ingredients[index].name)
                                 .padding(.vertical, 3)
                             
                         }//: GROUP
@@ -39,8 +51,10 @@ struct RecipeIngredientBox: View {
                         
                         Spacer(minLength: 25)
                         
-                        Text("1g")
-                            .multilineTextAlignment(.trailing)
+                        if let amount = ingredients[index].amount {
+                            Text("\(amount)g")
+                                .multilineTextAlignment(.trailing)
+                        }
                     }
                 }//: LOOP
             }
@@ -75,6 +89,6 @@ struct RecipeIngredientBox: View {
 
 struct RecipeIngredientBox_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeIngredientBox()
+        RecipeIngredientBox(ingredients: TestData.ingredients)
     }
 }

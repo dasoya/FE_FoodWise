@@ -9,9 +9,33 @@ import SwiftUI
 
 struct DiaryView: View {
     var body: some View {
-        WeeklyHeader()
-            .padding(.top,38)
         
+        NavigationView{
+            
+            
+            VStack(alignment: .leading){
+                WeeklyHeader()
+                    .padding(.top,38)
+                
+                ZStack(alignment: .bottom){
+                    
+                    HStack{
+                        Spacer()
+                        NavigationLink(destination: CreateDiaryView()){
+                            Circle()
+                                .frame(width: 56,height: 56)
+                                .foregroundColor(.myprimary)
+                                .overlay(Image(systemName: "plus")
+                                    .font(.system(size: 29, weight: .semibold))
+                                    .foregroundColor(.black),alignment: .center)
+                                .padding(.bottom,25)
+                            
+                        }
+                    }
+                }
+                
+            }
+        }
         
     }
 }

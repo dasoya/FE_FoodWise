@@ -5,6 +5,7 @@ target 'FoodWise' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 pod 'ImageSlideshow', '~> 1.9.0'
+pod 'GoogleAPIClientForREST'
   # Pods for FoodWise
 
   target 'FoodWiseTests' do

@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 struct Wrapper<T:Decodable> : Decodable{
     let items : [T]
@@ -37,7 +38,7 @@ extension APIResource {
 
 struct RecipesResource: APIResource {
     
-    typealias ModelType = Recipe
+    typealias ModelType = RecipeAPIModel
     var id : Int?
     
     var methodPath: String{
@@ -61,11 +62,12 @@ protocol NetworkRequest: AnyObject {
 extension NetworkRequest {
     fileprivate func load(_ url: URL, withCompletion completion: @escaping (ModelType?) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { [weak self] (data, _ , _) -> Void in
-            guard let data = data, let value = self?.decode(data) else {
+            guard let data = data else { return }
+                    
+            guard let value = self?.decode(data) else {
                 DispatchQueue.main.async { completion(nil) }
                 return
             }
-            // Use the Resource struct to parse data
         
             DispatchQueue.main.async { completion(value) }
                
@@ -88,18 +90,20 @@ class APIRequest<Resource: APIResource>{
 
 extension APIRequest: NetworkRequest {
 
-    func decode(_ data: Data) -> RecommendRecipe? {
+    func decode(_ data: Data) -> [Resource.ModelType]? {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .secondsSince1970
-        let MainRecipes = try? decoder.decode(RecommendRecipe.self, from: data)
+        let wrapper = try? decoder.decode(Wrapper<Resource.ModelType>.self, from: data)
         
-        //print(MainRecipes!)
+        guard let wrapper = wrapper else {
+            print("recipe decode fail")
+            return nil }
         
-        return MainRecipes
-
+        return wrapper.items
+       
     }
 
-    func execute(withCompletion completion: @escaping (RecommendRecipe?) -> Void){
+    func execute(withCompletion completion: @escaping ([Resource.ModelType]?) -> Void){
         load(resource.url, withCompletion: completion)
     }
 }
@@ -113,11 +117,21 @@ class ImageRequest {
 }
 
 extension ImageRequest: NetworkRequest {
-    func decode(_ data: Data) -> UIImage? {
-        return UIImage(data: data)
+    func decode(_ data: Data) -> Image? {
+        let str = String(decoding: data, as: UTF8.self)
+        print("^^^"+str)
+    do {
+        guard let image = UIImage(data: data, scale: 1.0) else {
+            print("Unsupported image format")
+            return nil }
+        return Image(uiImage: image)
+    } catch let error {
+            print("Error decoding image: \(error)")
+            return nil
+        }
     }
     
-    func execute(withCompletion completion: @escaping (UIImage?) -> Void) {
+    func execute(withCompletion completion: @escaping (Image?) -> Void) {
         load(url, withCompletion: completion)
     }
 }

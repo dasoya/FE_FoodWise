@@ -10,8 +10,18 @@ import SwiftUI
 
 struct RecipeBox : View {
     
-    var recipe : Recipe
+   // var recipe : recipe
     @State var heart = false
+    var imgtest : UIImage?
+    @StateObject private var dataModel: RecipeDataModel
+       
+       init(recipe: Recipe) {
+           let dataModel = RecipeDataModel(recipe: recipe)
+           _dataModel = StateObject(wrappedValue: dataModel)
+           dataModel.loadRecipeImage()
+           
+       }
+    
     
     
     var body : some View {
@@ -20,11 +30,15 @@ struct RecipeBox : View {
         VStack(alignment: .leading, spacing: 8.0){
            
             ZStack(alignment: .topTrailing){
-                Image("sample")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 160.0, height: 114.0)
+              
                 
+                if let img = dataModel.recipe.image ?? Image("sample") {
+
+                     img
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 160.0, height: 114.0)
+                }
                
                 HStack(spacing: 3.06) {
                     
@@ -38,7 +52,7 @@ struct RecipeBox : View {
                     .toggleStyle(ButtonToggleStyle())
                     .foregroundColor(.red)
                 
-                    if let cnt = recipe.likeCnt{
+                    if let cnt = dataModel.recipe.likeCnt{
                         Text("\(cnt)")
                             .tag1()
                             .font(.caption)
@@ -58,7 +72,7 @@ struct RecipeBox : View {
             
             Group{
                 HStack(alignment: .top, spacing: 4) {
-                    if let date = recipe.expiredDate{
+                    if let date = dataModel.recipe.expiredDate {
                        // let leftDay = Date().leftDay(from: date)
                         Text("D-\(date)")
                             .tag1()
@@ -71,12 +85,12 @@ struct RecipeBox : View {
                             .cornerRadius(2)
                     }
                     
-                    if let ingredient = recipe.ingredient {
+                    if let ingredient = dataModel.recipe.ingredient {
                         Text(ingredient).grayBoxTextStyle()
                     }
                 }
                 
-                Text(recipe.name)
+                Text(dataModel.recipe.name)
                     .subTitle3()
                     .foregroundColor(.black)
                     .lineSpacing(16)
@@ -92,10 +106,11 @@ struct RecipeBox : View {
         .background(Color.mygray1)
         .cornerRadius(4)
         .shadow(color: .mygray2, radius: 2)
+//        .onAppear {
+//            dataModel.loadRecipeImage()
+//        }
+//
     }
-    
-    
-    
 }
 
 

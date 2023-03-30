@@ -16,55 +16,63 @@ struct HotRecipeView: View {
     
     var body: some View {
         
-        NavigationView {
+       NavigationView {
             
                List {
                     ImageSlider()
-                        .frame(height: 467)
+                       // .frame(height: 467)
                         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
                         .listRowSeparator(.hidden)
                 }
                 .listStyle(.plain)
                 .edgesIgnoringSafeArea(.all)
-        }
-      
-        
-        
-    }
+        }}
 }
 
 struct ImageSlider: View {
     
     // 1
-    private let images = ["sample", "sample1", "sample"]
+    @StateObject private var dataModel = RecipesDataModel()
+    //private let images = ["sample", "sample1", "sample"]
     
     init() {
          UIScrollView.appearance().bounces = false
       }
+    
+    func recipeView(recipes : [Recipe]) -> some View {
+        
+        ForEach(recipes) { recipe in
+            NavigationLink(destination: RecipeDetailView(recipe: recipe)){
+                ZStack(alignment: .bottomLeading){
+                    getGradientImage(image: recipe.image ?? Image("sample"))
+                        .ignoresSafeArea()
+                    
+                    VStack(alignment: .leading){
+                        Text("지금 HOT한 레시피")
+                            .subTitle1()
+                            
+                            .padding(.bottom,1)
+                        
+                        Text(recipe.name)
+                            .title1()
+                    }
+                    .padding(.leading,20)
+                    .padding(.bottom,50)
+                    
+                }.foregroundColor(.black)
+                
+            }
+        } .ignoresSafeArea()
+        
+    }
     
     var body: some View {
         // 2
         
         ScrollView(showsIndicators: false) {
             TabView {
-                ForEach(images, id: \.self) { item in
-                    ZStack(alignment: .bottomLeading){
-                        getGradientImage(image: item)
-                            .ignoresSafeArea()
-                        
-                        VStack(alignment: .leading){
-                            Text("지금 HOT한 레시피")
-                                .subTitle1()
-                                .padding(.bottom,1)
-                            
-                            Text("된장 크림 파스타")
-                                .title1()
-                        }
-                        .padding(.leading,20)
-                        .padding(.bottom,50)
-                        
-                    }
-                } .ignoresSafeArea()
+                recipeView(recipes: dataModel.hotRecipes.count != 0 ? dataModel.hotRecipes : TestData.hotrecipe )
+                
             }
             .frame(
                 width: UIScreen.main.bounds.width ,
@@ -73,6 +81,7 @@ struct ImageSlider: View {
             .tabViewStyle(PageTabViewStyle())
             .onAppear {
                 setupAppearance()
+                dataModel.fetch()
             }
             
         }
@@ -88,7 +97,7 @@ struct ImageSlider: View {
 
 
 
-    func getGradientImage(image : String) -> some View {
+    func getGradientImage(image : Image) -> some View {
         
        return  ZStack{
             
@@ -105,7 +114,7 @@ struct ImageSlider: View {
                 .fill(.white)
             
             
-            Image(image)
+            image
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(width: UIScreen.main.bounds.width,height: 467)//467

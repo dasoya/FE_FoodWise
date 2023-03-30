@@ -22,66 +22,73 @@ struct MainRecipeView : View {
 //        }
 //
         
-        return VStack(alignment: .leading){
+        return
             ScrollView(showsIndicators : false){
-            
-                HotRecipeView()
-                
-                HStack{
-                    Image("recipe_hot")
-                        .resizable()
-                        .frame(width: 21,height: 28)
+                VStack(alignment: .leading){
+                    HotRecipeView()
+                        .frame(height: 467)
+                   
                     
-                    Text("위급한 식자재 이용 레시피")
-                        .title2()
-                    Spacer()
+                    Group{
+                        
+                        HStack{
+                            Image("recipe_hot")
+                                .resizable()
+                                .frame(width: 21,height: 28)
+                            
+                            Text("위급한 식자재 이용 레시피")
+                                .title2()
+                            Spacer()
+                        }
+                        
+                        ScrollView(.horizontal, showsIndicators : false){
+                            HStack{
+                                
+                                ForEach(dataModel.expRecipes) { recipe in
+                                    NavigationLink(destination: RecipeDetailView(recipe: recipe)){
+                                        RecipeBox(recipe: recipe)
+                                    }
+                                    
+                                }
+                            }
+                        }.padding(.bottom,25)
+                        //.padding(.leading,-40)
+                        
+                        
+                        HStack{
+                            Image("recipe_home")
+                                .resizable()
+                                .frame(width: 28,height: 27)
+                            
+                            Text("내 냉장고 레시피")
+                                .title2()
+                            Spacer()
+                        }
+                        
+                        ScrollView(.horizontal,showsIndicators : false){
+                            HStack{
+                                
+                                ForEach(dataModel.ivtRecipes) { recipe in
+                                    NavigationLink(destination: RecipeDetailView(recipe: recipe)){
+                                        RecipeBox(recipe: recipe)
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        
+                       // Spacer(minLength: 40)
+                    }.padding(.leading,20)
+                    
+                    Spacer(minLength: 150)
                 }
              
-                ScrollView(.horizontal, showsIndicators : false){
-                    HStack{
-                        
-                        ForEach(dataModel.hotRecipes) { recipe in
-                            NavigationLink(destination: RecipeDetailView(recipe: recipe)){
-                                RecipeBox(recipe: recipe)
-                            }
-                            
-                        }
-                    }
-                }.padding(.bottom,33)
-                //.padding(.leading,-40)
-                
-                
-                HStack{
-                    Image("recipe_home")
-                        .resizable()
-                        .frame(width: 28,height: 27)
-                    
-                    Text("내 냉장고 레시피")
-                        .title2()
-                    Spacer()
-                }
-                
-                ScrollView(showsIndicators : false){
-                    HStack{
-                        
-                        ForEach(dataModel.ivtRecipes) { recipe in
-                            NavigationLink(destination: RecipeDetailView(recipe: recipe)){
-                                RecipeBox(recipe: recipe)
-                            }
-                            
-                        }
-                    }
-                }.padding(.leading,-40)
-                
-                Spacer(minLength: 40)
-            }//.padding(.leading,20)
+            }.ignoresSafeArea()
+            .onAppear{
+                dataModel.fetch()
+            }
             
-            
-            
-            
-        }.onAppear{
-            dataModel.fetch()
-        }
+        
     }
 }
 
