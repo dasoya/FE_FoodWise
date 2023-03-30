@@ -9,24 +9,13 @@ import SwiftUI
 
 struct DayTypeView: View {
     
-    @State private var selectedMeal: MealType = MealType.breakfast
+    @Binding var selectedMeal: MealType? //= MealType.breakfast
 
     
     var body: some View {
         
         VStack(alignment: .leading){
-            HStack{
-                
-                Circle()
-                    .foregroundColor(.myprimary)
-                    .frame(width: 20,height:20)
-                    .overlay(Text("1").subTitle2())
-                
-                Text("몇시에 드셨나요?")
-                    .title2()
-                
-               
-            }.padding(.bottom,16)
+            QuestionHeader(title: "몇시에 드셨나요?", order: 1)
             
             Picker("식사 선택", selection: $selectedMeal) {
                 Text("아침").tag(MealType.breakfast)
@@ -48,8 +37,9 @@ struct DayTypeView: View {
 }
 
 
+
 struct DayTypeView_Previews: PreviewProvider {
     static var previews: some View {
-        DayTypeView()
+        DayTypeView(selectedMeal: .constant(MealType.breakfast))
     }
 }

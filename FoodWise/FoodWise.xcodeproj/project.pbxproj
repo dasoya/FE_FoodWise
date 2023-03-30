@@ -16,6 +16,10 @@
 		CD13D87729A63F4000F47795 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87629A63F4000F47795 /* Recipe.swift */; };
 		CD13D87929A6562600F47795 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87829A6562600F47795 /* NetworkManager.swift */; };
 		CD13D87B29AA569300F47795 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87A29AA569300F47795 /* extension.swift */; };
+		CD15EBD329D5CC440014FAB4 /* getMenuName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15EBD229D5CC440014FAB4 /* getMenuName.swift */; };
+		CD15EBD529D5D2B10014FAB4 /* deleteIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15EBD429D5D2B10014FAB4 /* deleteIngredientsView.swift */; };
+		CD15EBD729D5DB930014FAB4 /* selectItemInFridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15EBD629D5DB930014FAB4 /* selectItemInFridge.swift */; };
+		CD15EBD929D5DF160014FAB4 /* selectFridgeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15EBD829D5DF160014FAB4 /* selectFridgeListView.swift */; };
 		CD1F26BE29B67260007ABC0C /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1F26BD29B67260007ABC0C /* CustomTabView.swift */; };
 		CD54B57D299F8E6400D932B0 /* FoodWiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */; };
 		CD54B57F299F8E6400D932B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B57E299F8E6400D932B0 /* ContentView.swift */; };
@@ -88,6 +92,10 @@
 		CD13D87629A63F4000F47795 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		CD13D87829A6562600F47795 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CD13D87A29AA569300F47795 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		CD15EBD229D5CC440014FAB4 /* getMenuName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getMenuName.swift; sourceTree = "<group>"; };
+		CD15EBD429D5D2B10014FAB4 /* deleteIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteIngredientsView.swift; sourceTree = "<group>"; };
+		CD15EBD629D5DB930014FAB4 /* selectItemInFridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectItemInFridge.swift; sourceTree = "<group>"; };
+		CD15EBD829D5DF160014FAB4 /* selectFridgeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectFridgeListView.swift; sourceTree = "<group>"; };
 		CD1F26BD29B67260007ABC0C /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		CD54B579299F8E6400D932B0 /* FoodWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWiseApp.swift; sourceTree = "<group>"; };
@@ -325,22 +333,26 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		CDD5145429D1B9A8000D6E6B /* New Group */ = {
+		CDD5145429D1B9A8000D6E6B /* CreatepartView */ = {
 			isa = PBXGroup;
 			children = (
+				CDD5145229D1B7DF000D6E6B /* CreateDiaryView.swift */,
 				CDD5145529D1B9C5000D6E6B /* DayTypeView.swift */,
 				CDD5145729D1DA41000D6E6B /* getMenuPicture.swift */,
+				CD15EBD229D5CC440014FAB4 /* getMenuName.swift */,
+				CD15EBD429D5D2B10014FAB4 /* deleteIngredientsView.swift */,
+				CD15EBD629D5DB930014FAB4 /* selectItemInFridge.swift */,
+				CD15EBD829D5DF160014FAB4 /* selectFridgeListView.swift */,
 			);
-			path = "New Group";
+			path = CreatepartView;
 			sourceTree = "<group>";
 		};
 		CDDA8EEB29C7192600663A3B /* Diary */ = {
 			isa = PBXGroup;
 			children = (
-				CDD5145429D1B9A8000D6E6B /* New Group */,
+				CDD5145429D1B9A8000D6E6B /* CreatepartView */,
 				CDDA8EEC29C7194F00663A3B /* DiaryView.swift */,
 				CDDA8EF229C71B6F00663A3B /* WeeklyHeader.swift */,
-				CDD5145229D1B7DF000D6E6B /* CreateDiaryView.swift */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -616,16 +628,20 @@
 				CD58AFAF29AB9CF0008C4947 /* HotRecipeView.swift in Sources */,
 				CD03908E29B6652B000A7F95 /* ingredient.swift in Sources */,
 				CDDA8EF129C71AE900663A3B /* WeekStore.swift in Sources */,
+				CD15EBD729D5DB930014FAB4 /* selectItemInFridge.swift in Sources */,
 				CD03908A29B6291F000A7F95 /* RecipeHowBox.swift in Sources */,
 				CD03908629B616D6000A7F95 /* RecipeDetailView.swift in Sources */,
+				CD15EBD329D5CC440014FAB4 /* getMenuName.swift in Sources */,
 				CDD5145829D1DA41000D6E6B /* getMenuPicture.swift in Sources */,
 				CD54B5AC299F9A7300D932B0 /* LoginView.swift in Sources */,
 				CDDA8EED29C7194F00663A3B /* DiaryView.swift in Sources */,
 				CDDA8EE229BFCE6900663A3B /* MyFridgeListView.swift in Sources */,
 				CD54B57F299F8E6400D932B0 /* ContentView.swift in Sources */,
 				CDD5144F29D1B270000D6E6B /* DayDiary.swift in Sources */,
+				CD15EBD929D5DF160014FAB4 /* selectFridgeListView.swift in Sources */,
 				CDDA8EE829C3C08700663A3B /* SearchBar.swift in Sources */,
 				CDDA8EF329C71B6F00663A3B /* WeeklyHeader.swift in Sources */,
+				CD15EBD529D5D2B10014FAB4 /* deleteIngredientsView.swift in Sources */,
 				CD13D87B29AA569300F47795 /* extension.swift in Sources */,
 				CDD5144D29D0FC49000D6E6B /* googleCloudStorage.m in Sources */,
 				CD54B5BA29A2592700D932B0 /* MainRecipeView.swift in Sources */,

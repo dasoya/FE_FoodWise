@@ -22,7 +22,7 @@ struct MyFridgeView: View {
     var body: some View {
         VStack(alignment: .leading){
            
-            ZStack() {
+            ZStack(){
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color.mygray2)
                 .frame(width: 350, height: 87)
@@ -49,7 +49,7 @@ struct MyFridgeView: View {
             
             ZStack(alignment: .bottom){
                 ScrollView{
-                   MyFridgeListView()
+                    MyFridgeListView()
                 }
                 
                 Spacer()

@@ -13,7 +13,8 @@ struct IngredientListRow: View {
     var item  = TestData.ingredient
     
     var dateFormat =  DateFormatter()
-   
+    var isSelected = false
+    
     var body: some View {
        
         dateFormat.dateFormat = "yyyy.MM.dd"
@@ -53,7 +54,7 @@ struct IngredientListRow: View {
 
         }
         .frame(width: 350, height: 49)
-            .background(Color.mygray2)
+        .background(isSelected ? .myprimary : Color.mygray2)
             .cornerRadius(6)
                     
     }

@@ -14,17 +14,24 @@ enum MealType : Decodable {
   case lunch
   case dinner
     
+    
 }
 
 struct DayDiary  {
     
     
-    let menu: String
+    var menu: String
     let imageURL: URL?
     var image: Image?
     
-    let daytype : MealType?
+    var daytype : MealType?
    
+    init(menu: String, imageURL: URL? = nil, image: Image? = nil, daytype: MealType? = nil) {
+        self.menu = menu
+        self.imageURL = imageURL
+        self.image = image
+        self.daytype = daytype
+    }
   
 }
 

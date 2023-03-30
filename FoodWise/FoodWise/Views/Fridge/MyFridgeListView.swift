@@ -14,7 +14,9 @@ struct MyFridgeListView : View{
     
     
     var inventory = ["육류" : TestData.ingredients,"해산물": TestData.ingredients]
+
     
+   
     var body: some View {
         
         
