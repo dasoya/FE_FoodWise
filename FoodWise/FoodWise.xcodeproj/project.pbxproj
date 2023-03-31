@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F9E39C9530511DF283EEDCB /* Pods_FoodWiseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 575B4C84A43B851D3D717CD2 /* Pods_FoodWiseTests.framework */; };
+		8B20D84102F6B4E858C3DF79 /* Pods_FoodWise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741E18AA2B89A50E86B43962 /* Pods_FoodWise.framework */; };
+		CD03908629B616D6000A7F95 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD03908529B616D6000A7F95 /* RecipeDetailView.swift */; };
+		CD03908829B628BD000A7F95 /* RecipeIngredientBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD03908729B628BD000A7F95 /* RecipeIngredientBox.swift */; };
+		CD03908A29B6291F000A7F95 /* RecipeHowBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD03908929B6291F000A7F95 /* RecipeHowBox.swift */; };
+		CD03908E29B6652B000A7F95 /* ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD03908D29B6652B000A7F95 /* ingredient.swift */; };
+		CD13D87729A63F4000F47795 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87629A63F4000F47795 /* Recipe.swift */; };
+		CD13D87929A6562600F47795 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87829A6562600F47795 /* NetworkManager.swift */; };
+		CD13D87B29AA569300F47795 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD13D87A29AA569300F47795 /* extension.swift */; };
+		CD15EBD329D5CC440014FAB4 /* getMenuName.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15EBD229D5CC440014FAB4 /* getMenuName.swift */; };
+		CD15EBD529D5D2B10014FAB4 /* deleteIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15EBD429D5D2B10014FAB4 /* deleteIngredientsView.swift */; };
+		CD15EBD729D5DB930014FAB4 /* selectItemInFridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15EBD629D5DB930014FAB4 /* selectItemInFridge.swift */; };
+		CD15EBD929D5DF160014FAB4 /* selectFridgeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD15EBD829D5DF160014FAB4 /* selectFridgeListView.swift */; };
+		CD1F26BE29B67260007ABC0C /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1F26BD29B67260007ABC0C /* CustomTabView.swift */; };
 		CD54B57D299F8E6400D932B0 /* FoodWiseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */; };
 		CD54B57F299F8E6400D932B0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B57E299F8E6400D932B0 /* ContentView.swift */; };
 		CD54B581299F8E6500D932B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD54B580299F8E6500D932B0 /* Assets.xcassets */; };
@@ -23,7 +37,25 @@
 		CD54B5BC29A25A5900D932B0 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BB29A25A5900D932B0 /* MyPageView.swift */; };
 		CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BD29A25CA500D932B0 /* MainView.swift */; };
 		CD54B5C029A25F1D00D932B0 /* MyFridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */; };
-		CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */; };
+		CD58AFAD29AB9C9E008C4947 /* RecipeBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58AFAC29AB9C9E008C4947 /* RecipeBoxView.swift */; };
+		CD58AFAF29AB9CF0008C4947 /* HotRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */; };
+		CDD5144A29D0B4BF000D6E6B /* GoogleAPIREST.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5144929D0B4BF000D6E6B /* GoogleAPIREST.swift */; };
+		CDD5144D29D0FC49000D6E6B /* googleCloudStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD5144C29D0FC49000D6E6B /* googleCloudStorage.m */; };
+		CDD5144F29D1B270000D6E6B /* DayDiary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5144E29D1B270000D6E6B /* DayDiary.swift */; };
+		CDD5145329D1B7DF000D6E6B /* CreateDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5145229D1B7DF000D6E6B /* CreateDiaryView.swift */; };
+		CDD5145629D1B9C5000D6E6B /* DayTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5145529D1B9C5000D6E6B /* DayTypeView.swift */; };
+		CDD5145829D1DA41000D6E6B /* getMenuPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD5145729D1DA41000D6E6B /* getMenuPicture.swift */; };
+		CDDA8EE229BFCE6900663A3B /* MyFridgeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */; };
+		CDDA8EE429BFD86400663A3B /* addIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE329BFD86400663A3B /* addIngredientView.swift */; };
+		CDDA8EE829C3C08700663A3B /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE729C3C08700663A3B /* SearchBar.swift */; };
+		CDDA8EEA29C5F5A800663A3B /* IngredientListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EE929C5F5A800663A3B /* IngredientListRow.swift */; };
+		CDDA8EED29C7194F00663A3B /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EEC29C7194F00663A3B /* DiaryView.swift */; };
+		CDDA8EEF29C719AC00663A3B /* WeekValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EEE29C719AC00663A3B /* WeekValue.swift */; };
+		CDDA8EF129C71AE900663A3B /* WeekStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EF029C71AE900663A3B /* WeekStore.swift */; };
+		CDDA8EF329C71B6F00663A3B /* WeeklyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDA8EF229C71B6F00663A3B /* WeeklyHeader.swift */; };
+		CDDA8EFD29CCC26E00663A3B /* GmarketSansTTF in Resources */ = {isa = PBXBuildFile; fileRef = CDDA8EFC29CCC26E00663A3B /* GmarketSansTTF */; };
+		CDDA8F0929CCC2A300663A3B /* Pretendard in Resources */ = {isa = PBXBuildFile; fileRef = CDDA8F0829CCC2A300663A3B /* Pretendard */; };
+		FD924DC1B0AF9E2B9C8BDB3D /* Pods_FoodWise_FoodWiseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45ACE794628F0E3A2321119D /* Pods_FoodWise_FoodWiseUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +76,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D4416167BC7F738F2B6329D /* Pods-FoodWise-FoodWiseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodWise-FoodWiseUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodWise-FoodWiseUITests/Pods-FoodWise-FoodWiseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		146D16B4B37FA2BE8DC0A2D4 /* Pods-FoodWiseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodWiseTests.release.xcconfig"; path = "Target Support Files/Pods-FoodWiseTests/Pods-FoodWiseTests.release.xcconfig"; sourceTree = "<group>"; };
+		45ACE794628F0E3A2321119D /* Pods_FoodWise_FoodWiseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodWise_FoodWiseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		496596E8C28B224C740B5FF9 /* Pods-FoodWiseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodWiseTests.debug.xcconfig"; path = "Target Support Files/Pods-FoodWiseTests/Pods-FoodWiseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		575B4C84A43B851D3D717CD2 /* Pods_FoodWiseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodWiseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		741E18AA2B89A50E86B43962 /* Pods_FoodWise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodWise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77F88DE2864B7C6C5D9C62D8 /* Pods-FoodWise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodWise.release.xcconfig"; path = "Target Support Files/Pods-FoodWise/Pods-FoodWise.release.xcconfig"; sourceTree = "<group>"; };
+		8A7A3AFD247704BE9D5B34B0 /* Pods-FoodWise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodWise.debug.xcconfig"; path = "Target Support Files/Pods-FoodWise/Pods-FoodWise.debug.xcconfig"; sourceTree = "<group>"; };
+		BCD8AF394962AE1DF9272514 /* Pods-FoodWise-FoodWiseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodWise-FoodWiseUITests.debug.xcconfig"; path = "Target Support Files/Pods-FoodWise-FoodWiseUITests/Pods-FoodWise-FoodWiseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD03908529B616D6000A7F95 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		CD03908729B628BD000A7F95 /* RecipeIngredientBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeIngredientBox.swift; sourceTree = "<group>"; };
+		CD03908929B6291F000A7F95 /* RecipeHowBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeHowBox.swift; sourceTree = "<group>"; };
+		CD03908D29B6652B000A7F95 /* ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ingredient.swift; sourceTree = "<group>"; };
+		CD13D87629A63F4000F47795 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		CD13D87829A6562600F47795 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CD13D87A29AA569300F47795 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
+		CD15EBD229D5CC440014FAB4 /* getMenuName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getMenuName.swift; sourceTree = "<group>"; };
+		CD15EBD429D5D2B10014FAB4 /* deleteIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteIngredientsView.swift; sourceTree = "<group>"; };
+		CD15EBD629D5DB930014FAB4 /* selectItemInFridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectItemInFridge.swift; sourceTree = "<group>"; };
+		CD15EBD829D5DF160014FAB4 /* selectFridgeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectFridgeListView.swift; sourceTree = "<group>"; };
+		CD1F26BD29B67260007ABC0C /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		CD54B579299F8E6400D932B0 /* FoodWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodWiseApp.swift; sourceTree = "<group>"; };
 		CD54B57E299F8E6400D932B0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,12 +110,30 @@
 		CD54B5AB299F9A7300D932B0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CD54B5AD299F9BFD00D932B0 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		CD54B5B4299F9E0900D932B0 /* GoogleSignInAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInAuthenticator.swift; sourceTree = "<group>"; };
-		CD54B5B629A2444A00D932B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD54B5B629A2444A00D932B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD54B5B929A2592700D932B0 /* MainRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRecipeView.swift; sourceTree = "<group>"; };
 		CD54B5BB29A25A5900D932B0 /* MyPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageView.swift; sourceTree = "<group>"; };
 		CD54B5BD29A25CA500D932B0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeView.swift; sourceTree = "<group>"; };
-		CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInButton.swift; sourceTree = "<group>"; };
+		CD58AFAC29AB9C9E008C4947 /* RecipeBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBoxView.swift; sourceTree = "<group>"; };
+		CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotRecipeView.swift; sourceTree = "<group>"; };
+		CDD5144929D0B4BF000D6E6B /* GoogleAPIREST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPIREST.swift; sourceTree = "<group>"; };
+		CDD5144B29D0FC48000D6E6B /* FoodWise-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FoodWise-Bridging-Header.h"; sourceTree = "<group>"; };
+		CDD5144C29D0FC49000D6E6B /* googleCloudStorage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = googleCloudStorage.m; sourceTree = "<group>"; };
+		CDD5144E29D1B270000D6E6B /* DayDiary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayDiary.swift; sourceTree = "<group>"; };
+		CDD5145229D1B7DF000D6E6B /* CreateDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryView.swift; sourceTree = "<group>"; };
+		CDD5145529D1B9C5000D6E6B /* DayTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTypeView.swift; sourceTree = "<group>"; };
+		CDD5145729D1DA41000D6E6B /* getMenuPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = getMenuPicture.swift; sourceTree = "<group>"; };
+		CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFridgeListView.swift; sourceTree = "<group>"; };
+		CDDA8EE329BFD86400663A3B /* addIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addIngredientView.swift; sourceTree = "<group>"; };
+		CDDA8EE729C3C08700663A3B /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CDDA8EE929C5F5A800663A3B /* IngredientListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListRow.swift; sourceTree = "<group>"; };
+		CDDA8EEC29C7194F00663A3B /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
+		CDDA8EEE29C719AC00663A3B /* WeekValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekValue.swift; sourceTree = "<group>"; };
+		CDDA8EF029C71AE900663A3B /* WeekStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekStore.swift; sourceTree = "<group>"; };
+		CDDA8EF229C71B6F00663A3B /* WeeklyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyHeader.swift; sourceTree = "<group>"; };
+		CDDA8EFC29CCC26E00663A3B /* GmarketSansTTF */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GmarketSansTTF; sourceTree = "<group>"; };
+		CDDA8F0829CCC2A300663A3B /* Pretendard */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Pretendard; path = "../../../../../../Downloads/Pretendard-1.3.6 2/public/static/Pretendard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +143,7 @@
 			files = (
 				CD54B5A8299F97E400D932B0 /* GoogleSignIn in Frameworks */,
 				CD54B5AA299F97E400D932B0 /* GoogleSignInSwift in Frameworks */,
+				8B20D84102F6B4E858C3DF79 /* Pods_FoodWise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F9E39C9530511DF283EEDCB /* Pods_FoodWiseTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +159,76 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD924DC1B0AF9E2B9C8BDB3D /* Pods_FoodWise_FoodWiseUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		093EA80135E711CA8513E6AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A7A3AFD247704BE9D5B34B0 /* Pods-FoodWise.debug.xcconfig */,
+				77F88DE2864B7C6C5D9C62D8 /* Pods-FoodWise.release.xcconfig */,
+				BCD8AF394962AE1DF9272514 /* Pods-FoodWise-FoodWiseUITests.debug.xcconfig */,
+				0D4416167BC7F738F2B6329D /* Pods-FoodWise-FoodWiseUITests.release.xcconfig */,
+				496596E8C28B224C740B5FF9 /* Pods-FoodWiseTests.debug.xcconfig */,
+				146D16B4B37FA2BE8DC0A2D4 /* Pods-FoodWiseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		62163AEDA28460E4F2262217 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				741E18AA2B89A50E86B43962 /* Pods_FoodWise.framework */,
+				45ACE794628F0E3A2321119D /* Pods_FoodWise_FoodWiseUITests.framework */,
+				575B4C84A43B851D3D717CD2 /* Pods_FoodWiseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CD03908B29B64EFE000A7F95 /* Recipe */ = {
+			isa = PBXGroup;
+			children = (
+				CD54B5B929A2592700D932B0 /* MainRecipeView.swift */,
+				CD58AFAE29AB9CF0008C4947 /* HotRecipeView.swift */,
+				CD58AFAC29AB9C9E008C4947 /* RecipeBoxView.swift */,
+				CD03908529B616D6000A7F95 /* RecipeDetailView.swift */,
+				CD03908729B628BD000A7F95 /* RecipeIngredientBox.swift */,
+				CD03908929B6291F000A7F95 /* RecipeHowBox.swift */,
+			);
+			path = Recipe;
+			sourceTree = "<group>";
+		};
+		CD03908C29B64F23000A7F95 /* Fridge */ = {
+			isa = PBXGroup;
+			children = (
+				CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */,
+				CDDA8EE129BFCE6900663A3B /* MyFridgeListView.swift */,
+				CDDA8EE929C5F5A800663A3B /* IngredientListRow.swift */,
+				CDDA8EE329BFD86400663A3B /* addIngredientView.swift */,
+			);
+			path = Fridge;
+			sourceTree = "<group>";
+		};
+		CD13D87529A63F3300F47795 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD13D87629A63F4000F47795 /* Recipe.swift */,
+				CDD5144E29D1B270000D6E6B /* DayDiary.swift */,
+				CD13D87829A6562600F47795 /* NetworkManager.swift */,
+				CD03908D29B6652B000A7F95 /* ingredient.swift */,
+				CDDA8EEE29C719AC00663A3B /* WeekValue.swift */,
+				CDDA8EF029C71AE900663A3B /* WeekStore.swift */,
+				CDD5144929D0B4BF000D6E6B /* GoogleAPIREST.swift */,
+				CDD5144C29D0FC49000D6E6B /* googleCloudStorage.m */,
+				CDD5144B29D0FC48000D6E6B /* FoodWise-Bridging-Header.h */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CD54B570299F8E6400D932B0 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +236,8 @@
 				CD54B58C299F8E6500D932B0 /* FoodWiseTests */,
 				CD54B596299F8E6500D932B0 /* FoodWiseUITests */,
 				CD54B57A299F8E6400D932B0 /* Products */,
+				093EA80135E711CA8513E6AD /* Pods */,
+				62163AEDA28460E4F2262217 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,12 +254,13 @@
 		CD54B57B299F8E6400D932B0 /* FoodWise */ = {
 			isa = PBXGroup;
 			children = (
-				CD54B5C129A2633400D932B0 /* Extensions */,
+				CDDA8EF529CCAE1C00663A3B /* Fonts */,
 				CD54B57C299F8E6400D932B0 /* FoodWiseApp.swift */,
+				CD13D87529A63F3300F47795 /* Models */,
+				CD54B5C129A2633400D932B0 /* Extensions */,
 				CD54B5B629A2444A00D932B0 /* Info.plist */,
 				CD54B5B3299F9DF500D932B0 /* Services */,
 				CD54B5B1299F9C1900D932B0 /* Views */,
-				CD54B5B0299F9C0E00D932B0 /* Models */,
 				CD54B5AF299F9C0200D932B0 /* ViewModels */,
 				CD54B580299F8E6500D932B0 /* Assets.xcassets */,
 				CD54B582299F8E6500D932B0 /* Preview Content */,
@@ -161,22 +301,18 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		CD54B5B0299F9C0E00D932B0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		CD54B5B1299F9C1900D932B0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CDDA8EEB29C7192600663A3B /* Diary */,
+				CD03908C29B64F23000A7F95 /* Fridge */,
+				CD03908B29B64EFE000A7F95 /* Recipe */,
 				CD54B57E299F8E6400D932B0 /* ContentView.swift */,
 				CD54B5AB299F9A7300D932B0 /* LoginView.swift */,
 				CD54B5BD29A25CA500D932B0 /* MainView.swift */,
-				CD54B5B929A2592700D932B0 /* MainRecipeView.swift */,
-				CD54B5BF29A25F1D00D932B0 /* MyFridgeView.swift */,
 				CD54B5BB29A25A5900D932B0 /* MyPageView.swift */,
+				CD1F26BD29B67260007ABC0C /* CustomTabView.swift */,
+				CDDA8EE729C3C08700663A3B /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,9 +328,42 @@
 		CD54B5C129A2633400D932B0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CD54B5C229A2634A00D932B0 /* GoogleSignInButton.swift */,
+				CD13D87A29AA569300F47795 /* extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CDD5145429D1B9A8000D6E6B /* CreatepartView */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5145229D1B7DF000D6E6B /* CreateDiaryView.swift */,
+				CDD5145529D1B9C5000D6E6B /* DayTypeView.swift */,
+				CDD5145729D1DA41000D6E6B /* getMenuPicture.swift */,
+				CD15EBD229D5CC440014FAB4 /* getMenuName.swift */,
+				CD15EBD429D5D2B10014FAB4 /* deleteIngredientsView.swift */,
+				CD15EBD629D5DB930014FAB4 /* selectItemInFridge.swift */,
+				CD15EBD829D5DF160014FAB4 /* selectFridgeListView.swift */,
+			);
+			path = CreatepartView;
+			sourceTree = "<group>";
+		};
+		CDDA8EEB29C7192600663A3B /* Diary */ = {
+			isa = PBXGroup;
+			children = (
+				CDD5145429D1B9A8000D6E6B /* CreatepartView */,
+				CDDA8EEC29C7194F00663A3B /* DiaryView.swift */,
+				CDDA8EF229C71B6F00663A3B /* WeeklyHeader.swift */,
+			);
+			path = Diary;
+			sourceTree = "<group>";
+		};
+		CDDA8EF529CCAE1C00663A3B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CDDA8F0829CCC2A300663A3B /* Pretendard */,
+				CDDA8EFC29CCC26E00663A3B /* GmarketSansTTF */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,9 +373,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD54B59D299F8E6500D932B0 /* Build configuration list for PBXNativeTarget "FoodWise" */;
 			buildPhases = (
+				42546BEFD289E0BCB9699DB6 /* [CP] Check Pods Manifest.lock */,
 				CD54B575299F8E6400D932B0 /* Sources */,
 				CD54B576299F8E6400D932B0 /* Frameworks */,
 				CD54B577299F8E6400D932B0 /* Resources */,
+				E8EE4A902167D30ABE0B38D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,6 +396,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD54B5A0299F8E6500D932B0 /* Build configuration list for PBXNativeTarget "FoodWiseTests" */;
 			buildPhases = (
+				05C62371A9495844B8BDFC9A /* [CP] Check Pods Manifest.lock */,
 				CD54B585299F8E6500D932B0 /* Sources */,
 				CD54B586299F8E6500D932B0 /* Frameworks */,
 				CD54B587299F8E6500D932B0 /* Resources */,
@@ -243,9 +415,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD54B5A3299F8E6500D932B0 /* Build configuration list for PBXNativeTarget "FoodWiseUITests" */;
 			buildPhases = (
+				6D61B0A03471F6425CE742FD /* [CP] Check Pods Manifest.lock */,
 				CD54B58F299F8E6500D932B0 /* Sources */,
 				CD54B590299F8E6500D932B0 /* Frameworks */,
 				CD54B591299F8E6500D932B0 /* Resources */,
+				9A2394CC24991803F85602F6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -269,6 +443,7 @@
 				TargetAttributes = {
 					CD54B578299F8E6400D932B0 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 					CD54B588299F8E6500D932B0 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -308,7 +483,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDA8EFD29CCC26E00663A3B /* GmarketSansTTF in Resources */,
 				CD54B584299F8E6500D932B0 /* Preview Assets.xcassets in Resources */,
+				CDDA8F0929CCC2A300663A3B /* Pretendard in Resources */,
 				CD54B581299F8E6500D932B0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,21 +506,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		05C62371A9495844B8BDFC9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodWiseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		42546BEFD289E0BCB9699DB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodWise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D61B0A03471F6425CE742FD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoodWise-FoodWiseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A2394CC24991803F85602F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodWise-FoodWiseUITests/Pods-FoodWise-FoodWiseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodWise-FoodWiseUITests/Pods-FoodWise-FoodWiseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodWise-FoodWiseUITests/Pods-FoodWise-FoodWiseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8EE4A902167D30ABE0B38D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodWise/Pods-FoodWise-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FoodWise/Pods-FoodWise-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoodWise/Pods-FoodWise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CD54B575299F8E6400D932B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDDA8EEA29C5F5A800663A3B /* IngredientListRow.swift in Sources */,
+				CDD5145329D1B7DF000D6E6B /* CreateDiaryView.swift in Sources */,
+				CD13D87929A6562600F47795 /* NetworkManager.swift in Sources */,
 				CD54B5BC29A25A5900D932B0 /* MyPageView.swift in Sources */,
 				CD54B5BE29A25CA500D932B0 /* MainView.swift in Sources */,
-				CD54B5C329A2634A00D932B0 /* GoogleSignInButton.swift in Sources */,
 				CD54B5AE299F9BFD00D932B0 /* AuthenticationViewModel.swift in Sources */,
+				CDDA8EE429BFD86400663A3B /* addIngredientView.swift in Sources */,
+				CDD5145629D1B9C5000D6E6B /* DayTypeView.swift in Sources */,
+				CD03908829B628BD000A7F95 /* RecipeIngredientBox.swift in Sources */,
 				CD54B5C029A25F1D00D932B0 /* MyFridgeView.swift in Sources */,
+				CD1F26BE29B67260007ABC0C /* CustomTabView.swift in Sources */,
+				CD58AFAF29AB9CF0008C4947 /* HotRecipeView.swift in Sources */,
+				CD03908E29B6652B000A7F95 /* ingredient.swift in Sources */,
+				CDDA8EF129C71AE900663A3B /* WeekStore.swift in Sources */,
+				CD15EBD729D5DB930014FAB4 /* selectItemInFridge.swift in Sources */,
+				CD03908A29B6291F000A7F95 /* RecipeHowBox.swift in Sources */,
+				CD03908629B616D6000A7F95 /* RecipeDetailView.swift in Sources */,
+				CD15EBD329D5CC440014FAB4 /* getMenuName.swift in Sources */,
+				CDD5145829D1DA41000D6E6B /* getMenuPicture.swift in Sources */,
 				CD54B5AC299F9A7300D932B0 /* LoginView.swift in Sources */,
+				CDDA8EED29C7194F00663A3B /* DiaryView.swift in Sources */,
+				CDDA8EE229BFCE6900663A3B /* MyFridgeListView.swift in Sources */,
 				CD54B57F299F8E6400D932B0 /* ContentView.swift in Sources */,
+				CDD5144F29D1B270000D6E6B /* DayDiary.swift in Sources */,
+				CD15EBD929D5DF160014FAB4 /* selectFridgeListView.swift in Sources */,
+				CDDA8EE829C3C08700663A3B /* SearchBar.swift in Sources */,
+				CDDA8EF329C71B6F00663A3B /* WeeklyHeader.swift in Sources */,
+				CD15EBD529D5D2B10014FAB4 /* deleteIngredientsView.swift in Sources */,
+				CD13D87B29AA569300F47795 /* extension.swift in Sources */,
+				CDD5144D29D0FC49000D6E6B /* googleCloudStorage.m in Sources */,
 				CD54B5BA29A2592700D932B0 /* MainRecipeView.swift in Sources */,
+				CD58AFAD29AB9C9E008C4947 /* RecipeBoxView.swift in Sources */,
+				CDD5144A29D0B4BF000D6E6B /* GoogleAPIREST.swift in Sources */,
 				CD54B5B5299F9E0900D932B0 /* GoogleSignInAuthenticator.swift in Sources */,
 				CD54B57D299F8E6400D932B0 /* FoodWiseApp.swift in Sources */,
+				CDDA8EEF29C719AC00663A3B /* WeekValue.swift in Sources */,
+				CD13D87729A63F4000F47795 /* Recipe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,9 +803,11 @@
 		};
 		CD54B59E299F8E6500D932B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A7A3AFD247704BE9D5B34B0 /* Pods-FoodWise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FoodWise/Preview Content\"";
@@ -518,6 +827,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = daso.FoodWise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodWise/Models/FoodWise-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -525,9 +836,11 @@
 		};
 		CD54B59F299F8E6500D932B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77F88DE2864B7C6C5D9C62D8 /* Pods-FoodWise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FoodWise/Preview Content\"";
@@ -547,6 +860,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = daso.FoodWise;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "FoodWise/Models/FoodWise-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -554,6 +868,7 @@
 		};
 		CD54B5A1299F8E6500D932B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 496596E8C28B224C740B5FF9 /* Pods-FoodWiseTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -573,6 +888,7 @@
 		};
 		CD54B5A2299F8E6500D932B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 146D16B4B37FA2BE8DC0A2D4 /* Pods-FoodWiseTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -592,6 +908,7 @@
 		};
 		CD54B5A4299F8E6500D932B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD8AF394962AE1DF9272514 /* Pods-FoodWise-FoodWiseUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -609,6 +926,7 @@
 		};
 		CD54B5A5299F8E6500D932B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D4416167BC7F738F2B6329D /* Pods-FoodWise-FoodWiseUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

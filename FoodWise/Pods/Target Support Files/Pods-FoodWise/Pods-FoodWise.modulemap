@@ -1,0 +1,6 @@
+framework module Pods_FoodWise {
+  umbrella header "Pods-FoodWise-umbrella.h"
+
+  export *
+  module * { export * }
+}

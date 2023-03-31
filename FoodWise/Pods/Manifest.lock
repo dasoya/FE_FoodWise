@@ -1,0 +1,31 @@
+PODS:
+  - GoogleAPIClientForREST (3.0.0):
+    - GoogleAPIClientForREST/Core (= 3.0.0)
+    - GTMSessionFetcher/Full (< 4.0, >= 1.6.1)
+  - GoogleAPIClientForREST/Core (3.0.0):
+    - GTMSessionFetcher/Full (< 4.0, >= 1.6.1)
+  - GTMSessionFetcher/Core (3.1.0)
+  - GTMSessionFetcher/Full (3.1.0):
+    - GTMSessionFetcher/Core
+  - ImageSlideshow (1.9.2):
+    - ImageSlideshow/Core (= 1.9.2)
+  - ImageSlideshow/Core (1.9.2)
+
+DEPENDENCIES:
+  - GoogleAPIClientForREST
+  - ImageSlideshow (~> 1.9.0)
+
+SPEC REPOS:
+  trunk:
+    - GoogleAPIClientForREST
+    - GTMSessionFetcher
+    - ImageSlideshow
+
+SPEC CHECKSUMS:
+  GoogleAPIClientForREST: 77c1fea751a6b572af8d8a224a5990f92ff80010
+  GTMSessionFetcher: c9e714f7eec91a55641e2bab9f45fd83a219b882
+  ImageSlideshow: be305b54eaf2b2cfc7a7141c7c734605d44dc07d
+
+PODFILE CHECKSUM: a3b7af2c2ff2b0a1ccd0e43025e1fa2249f8f96b
+
+COCOAPODS: 1.11.3
