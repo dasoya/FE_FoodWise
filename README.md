@@ -1,5 +1,8 @@
 # FoodWise_Client
-FoodWise - 🍎 Client Repo.
+FoodWise - an iOS app that aims to reduce the amount of food waste generated in households. 
+
+Users can register the items in their refrigerators and receive recipe recommendations based on their inventory. 
+The app also includes a meal diary feature, which allows users to keep track of their daily meals while managing their inventory.
 
 
 ## How to run the code
