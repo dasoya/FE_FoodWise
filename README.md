@@ -14,7 +14,6 @@ The app also includes a meal diary feature, which allows users to keep track of 
 <img src="https://github.com/dasoya/FE_FoodWise/assets/66422476/ac97e547-ffe3-4f46-aa40-b6d0e8f68065" width="200" height="410"/>
 <img src="https://github.com/dasoya/FE_FoodWise/assets/66422476/de1af1f2-665b-4d20-8407-245674974c1d" width="200" height="410"/>
 
-![IMG_5881](https://github.com/dasoya/FE_FoodWise/assets/66422476/de1af1f2-665b-4d20-8407-245674974c1d)
 
 ## Demo Video
 
